@@ -54,6 +54,24 @@ name desc limit 3 offset 2;
 
 
 
+1️⃣ Show all employees ordered by salary in ascending order.
+
+2️⃣ Show employees ordered by age in descending order.
+
+3️⃣ Show the top 3 highest paid employees.
+
+4️⃣ Show the 2 youngest employees.
+
+5️⃣ Show employees ordered by department (A→Z), and within each department by salary (highest first).
+
+6️⃣ Skip the 2 highest paid employees and show the next 3.
+
+7️⃣ Show the 4th and 5th oldest employees.
+
+8️⃣ Show all employees, but display only rows 6 to 8 in the sorted order (by name A→Z).
+
+9️⃣ Show employees in the IT department, sorted by salary (highest first), but display only the 2nd and 3rd employees in that order.
+
 
 
 
