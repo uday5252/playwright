@@ -85,3 +85,27 @@ name desc limit 3 offset 2;
 
 4️⃣ Show the 2nd and 3rd most expensive products.
 
+
+
+create database employee_db;
+use employee_db;
+CREATE TABLE employees (
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    age INT
+);
+
+INSERT INTO employees (emp_name, department, salary, age) VALUES
+('Alice', 'HR', 40000, 25),
+('Bob', 'IT', 60000, 30),
+('Charlie', 'IT', 60000, 28),
+('David', 'Finance', 50000, 30),
+('Eve', 'Finance', 50000, 35),
+('Frank', 'HR', 40000, 25),
+('Grace', 'IT', 70000, 40),
+('Helen', 'HR', 45000, 32),
+('Ian', 'Finance', 55000, 29),
+('Jack', 'IT', 75000, 45);
+
