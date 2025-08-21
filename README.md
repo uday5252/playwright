@@ -75,3 +75,13 @@ name desc limit 3 offset 2;
 
 
 
+=======================================
+
+1️⃣ Find the total sales amount (quantity × price) for each category.
+
+2️⃣ Show only categories where the total sales exceed 50,000.
+
+3️⃣ Find the average price of products in each category, sorted by highest average price.
+
+4️⃣ Show the 2nd and 3rd most expensive products.
+
