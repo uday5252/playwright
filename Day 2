@@ -1,0 +1,29 @@
+## 🔹 Tables and Data
+
+### `departments`
+
+| dept\_id | dept\_name  |
+| -------- | ----------- |
+| Test001  | Testing     |
+| Dev001   | Development |
+| Sale001  | Sales       |
+
+### `employees`
+
+| emp\_id | emp\_name | emp\_city | data    |
+| ------- | --------- | --------- | ------- |
+| 1       | Raju      | Mum       | Test001 |
+| 2       | Mary      | JPR       | Test001 |
+| 3       | Ramu      | HYD       | Sale001 |
+| 4       | Tim       | PUN       | Dev001  |
+
+
+### **Q1. List all employees along with their department names.**
+
+### **Q2. Find the number of employees in each department.**
+
+### **Q3. Show employees who work in the "Testing" department.**
+
+### **Q4. Find the department(s) that have more than 1 employee.**
+
+### **Q5. Get the list of employees ordered by department name (alphabetically).**
