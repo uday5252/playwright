@@ -1,0 +1,145 @@
+// // undefined
+// var age
+// // // console.log("Welcome to Javascript!")
+// // // we can create variable in 3 ways
+// // // using var, let and const
+// // // var username = "Raju"
+// // // username = "Mark"
+// // // console.log(username)
+
+// // // let age = 40
+// // // age = 41
+// // // console.log(age)
+
+
+// // // constant
+// // // const city = "Bangalore"
+// // // city = "Mumbai"
+// // // console.log(city)
+
+// // // const API_KEY = "*Hkh*&^(*98797)"
+
+// // // console.log(username, age, city)
+
+
+// // // { } ==> block
+// // if(true)
+// // {
+// //     var age = 50
+// //     console.log(age)
+// // }
+// // console.log(age)
+// // // var ==> global variables
+
+
+// console.log(age)
+// // var age = 30
+// age = 30
+// console.log(age)
+
+
+// console.log(name)
+// var name = "Raju"
+
+// functions
+
+// we can create function in 3 ways
+// 1) Using function declaration
+// 2) Using function expression
+// 3) Using arrow function
+
+// 1) Function Declaration
+// Create a function that performs addition between 2 numbers
+
+// function add1(){
+//     let num1 = 10
+//     let num2 = 20
+//     console.log(num1 + num2)
+// }
+// add1()
+
+// function add2(){
+//     let num1 = 30
+//     let num2 = 40
+//     console.log(num1 + num2)
+// }
+// add2()
+
+// function add3(){
+//     let num1 = 50
+//     let num2 = 60
+//     console.log(num1 + num2)
+// }
+// add3()
+
+
+
+// function add(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+// add(10, 20)
+// add(30, 40)
+
+// Function Expression
+
+// let add = function(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(10, 20)
+// add(30, 40)
+
+// Diff
+
+// add(10, 20)
+
+// function add(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+
+// let add = function(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(10, 20)
+// add(30, 40)
+
+
+// add(10, 20)
+// add(30, 40)
+
+// var add = function(num1, num2)
+// {
+//     console.log(num1 + num2)
+// }
+
+
+
+
+// var add = (num1, num2) =>
+// {
+//     console.log(num1 + num2)
+// }
+
+// add(10, 20)
+// add(30, 40)
+
+
+// var add = function(num1, num2)
+// {
+//     return num1 + num2
+// }
+
+// const output = add(10, 20)
+// console.log(output)
+
+// var add = (num1, num2) => num1 + num2
+
+// const output = add(100, 200)
+// console.log(output)
+
