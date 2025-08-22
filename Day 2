@@ -1,4 +1,33 @@
 ## 🔹 Tables and Data
+-- Create departments table
+CREATE TABLE departments (
+    dept_id   VARCHAR(20) PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+-- Insert data into departments
+INSERT INTO departments (dept_id, dept_name) VALUES
+('Test001', 'Testing'),
+('Dev001', 'Development'),
+('Sale001', 'Sales');
+
+
+-- Create employees table
+CREATE TABLE employees (
+    emp_id    INT PRIMARY KEY,
+    emp_name  VARCHAR(50) NOT NULL,
+    emp_city  VARCHAR(50),
+    data      VARCHAR(20),
+    CONSTRAINT fk_dept FOREIGN KEY (data) REFERENCES departments(dept_id)
+);
+
+-- Insert data into employees
+INSERT INTO employees (emp_id, emp_name, emp_city, data) VALUES
+(1, 'Raju', 'Mum',  'Test001'),
+(2, 'Mary', 'JPR',  'Test001'),
+(3, 'Ramu', 'HYD',  'Sale001'),
+(4, 'Tim',  'PUN',  'Dev001');
+
 
 ### `departments`
 
