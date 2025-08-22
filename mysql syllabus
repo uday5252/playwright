@@ -1,0 +1,51 @@
+• Getting Started with Database
+o Introduction to Database
+o Characteristics of DBMS
+o Data models
+o Relational DBMS
+o Database Administrator
+• Basics of SQL
+o The SQL Language
+o Rules for SQL Statements
+o Standard SQL Statement Groups
+• Data Query Language
+o The SELECT statement
+o The WHERE clause
+o Comparison, Mathematical, and Logical operators
+o The DISTINCT clause
+o The ORDER BY clause
+o Tips and Tricks in SELECT Statements
+• Aggregate (Group) functions
+o The Group functions
+o GROUP BY & HAVING clause
+o Examples of GROUP BY and HAVING clauses
+o Tips and Tricks
+• SQL (Single-Row) Functions
+o SQL functions
+o Number functions
+o Character functions
+o Date functions
+o Conversion functions
+o Miscellaneous functions
+o Tips and Tricks
+• Joins and Sub-queries
+o Joins
+o Types of Joins
+o Sub-query
+o CONNECT BY and START WITH clauses
+o Tips and Tricks
+• Introduction to Data Modeling, E-R model
+o Data Modeling
+o E-R model
+• Database Objects
+o Basic Data Types
+o Data Integrity
+o Examples of CREATE TABLE
+o Examples of ALTER TABLE
+o Database Objects
+o View
+o Deleting Database Objects
+• Data Manipulation Language
+o Adding Data
+o Removing Data
+o Modifying Data
