@@ -280,3 +280,189 @@ else
 {
     console.log("Discount not available!")
 }
+
+
+==============================================================================
+// sort()
+
+// const data = [ "Raju", "Ramu", "John", "Mary" ]
+// const sortedOutput = data.sort()
+// console.log(sortedOutput)
+
+// const data = [ 10, 30, 3, 300, 100, 1, 55 ]
+// const sortedOutput = data.sort()
+// console.log(sortedOutput)
+
+// -ve ==> dont swap the numbers
+// +ve ==> swap the numbers
+
+
+// const data = [ 10, 30, 3, 300, 100, 1, 55 ]
+
+// const sortedOutput = data.sort(function(a, b)
+// {
+//     return b - a
+// })
+
+// console.log(sortedOutput)
+
+// every() and some() ==> return boolean(true OR false)
+
+// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// const result = salaries.every((a, b, c)=>
+// {
+//    if(a > 7000)
+//    {
+//         return a + 5000
+//    }
+// })
+
+// console.log(result)
+
+
+// const shoppingCart = [ 3400, 4500, 280 ]
+
+// const status = shoppingCart.every(function(a)
+// {
+//     return a > 500
+// })
+
+// if(status == true)
+// {
+//      console.log("Please enter the coupon Welcome10 to get 10% discount")
+// }
+// else
+// {
+//     console.log("Discount not available!")
+// }
+
+// const shoppingCart = [ 3400, 450, 280 ]
+
+// const status = shoppingCart.some(function(a)
+// {
+//     return a > 500
+// })
+
+// if(status == true)
+// {
+//      console.log("Please enter the coupon Welcome10 to get 10% discount")
+// }
+// else
+// {
+//     console.log("Discount not available!")
+// }
+
+// const data = [ 10, 20, 30, 40, 50 ]
+// data.pop()
+// data.pop()
+// data.pop()
+// data.pop()
+// data.pop()
+// console.log(data)
+
+// const data = [ 10, 20, 30, 40, 50 ]
+// data.shift()
+// console.log(data)
+
+// const products = [ "laptop", "mobile", "books", 
+//     "shoes", "shirt", "cooker", "stove",
+//     "fridge", "drum", "bottle", "iron box",
+//     "makeup kit"
+//  ]
+
+
+// function getProducts(pageNo)
+// {
+//     console.log(products.slice((pageNo - 1) * 4, 4 * pageNo))
+// }
+
+// getProducts(1)
+// getProducts(2)
+// getProducts(3)
+
+
+// pageNo = 1 ==> start = 0, stop = 4
+// pageNo = 2 ==> start = 4, stop = 8
+// pageNo = 3 ==> start = 8, stop = 12
+
+
+
+// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// seatsBooked.splice(1, 2, "seat removed")
+// console.log(seatsBooked)
+
+
+// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// console.log(seatsBooked.includes("A4"))
+
+// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// console.log(seatsBooked.toString())
+// "A1,A2,A3,A4" ==> "A1A2A3A4"
+
+// const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
+// console.log(seatsBooked.indexOf("A2"))
+// console.log(seatsBooked.lastIndexOf("A2"))
+
+// const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
+// console.log(seatsBooked.length)
+
+// const seatsBooked = [ "Raju", "Ramu", "lives", "together", "sadly"]
+
+// const result = seatsBooked.join(" ")
+
+// console.log(result)
+
+const chatMessages = [
+  "how are you?",
+  "where are you?",
+  "had food",
+  "had lunch",
+  "had dinner",
+  "miss you!",
+  "you miss me?",
+  "what are you doing?",
+  "did you sleep?",
+  "good morning!",
+  "good night!",
+  "take care",
+  "call me",
+  "text me when free",
+  "let’s meet soon",
+  "are you busy?",
+  "had breakfast?",
+  "what’s up?",
+  "long time no see",
+  "feeling sleepy",
+  "going out?",
+  "come online",
+  "why not replying?",
+  "love you ❤️",
+  "I’m bored",
+  "watching TV",
+  "listening to music",
+  "studying now",
+  "I’m at work",
+  "I’m at home",
+  "let’s go for coffee",
+  "movie plan?",
+  "where to meet?",
+  "what’s the time?",
+  "send me pic",
+  "video call?",
+  "message me later",
+  "are you angry?",
+  "sorry 😔",
+  "thank you!",
+  "welcome back",
+  "feeling happy",
+  "feeling sad",
+  "don’t worry",
+  "good luck!",
+  "all the best",
+  "congratulations!",
+  "proud of you",
+  "see you soon"
+];
+
+console.log(chatMessages.slice(-5))
