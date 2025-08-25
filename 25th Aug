@@ -1,468 +1,575 @@
-// // undefined
-// var age
-// // // console.log("Welcome to Javascript!")
-// // // we can create variable in 3 ways
-// // // using var, let and const
-// // // var username = "Raju"
-// // // username = "Mark"
-// // // console.log(username)
+// // // undefined
+// // var age
+// // // // console.log("Welcome to Javascript!")
+// // // // we can create variable in 3 ways
+// // // // using var, let and const
+// // // // var username = "Raju"
+// // // // username = "Mark"
+// // // // console.log(username)
 
-// // // let age = 40
-// // // age = 41
+// // // // let age = 40
+// // // // age = 41
+// // // // console.log(age)
+
+
+// // // // constant
+// // // // const city = "Bangalore"
+// // // // city = "Mumbai"
+// // // // console.log(city)
+
+// // // // const API_KEY = "*Hkh*&^(*98797)"
+
+// // // // console.log(username, age, city)
+
+
+// // // // { } ==> block
+// // // if(true)
+// // // {
+// // //     var age = 50
+// // //     console.log(age)
+// // // }
 // // // console.log(age)
+// // // // var ==> global variables
 
 
-// // // constant
-// // // const city = "Bangalore"
-// // // city = "Mumbai"
-// // // console.log(city)
-
-// // // const API_KEY = "*Hkh*&^(*98797)"
-
-// // // console.log(username, age, city)
-
-
-// // // { } ==> block
-// // if(true)
-// // {
-// //     var age = 50
-// //     console.log(age)
-// // }
 // // console.log(age)
-// // // var ==> global variables
+// // // var age = 30
+// // age = 30
+// // console.log(age)
 
 
-// console.log(age)
-// // var age = 30
-// age = 30
-// console.log(age)
+// // console.log(name)
+// // var name = "Raju"
+
+// // functions
+
+// // we can create function in 3 ways
+// // 1) Using function declaration
+// // 2) Using function expression
+// // 3) Using arrow function
+
+// // 1) Function Declaration
+// // Create a function that performs addition between 2 numbers
+
+// // function add1(){
+// //     let num1 = 10
+// //     let num2 = 20
+// //     console.log(num1 + num2)
+// // }
+// // add1()
+
+// // function add2(){
+// //     let num1 = 30
+// //     let num2 = 40
+// //     console.log(num1 + num2)
+// // }
+// // add2()
+
+// // function add3(){
+// //     let num1 = 50
+// //     let num2 = 60
+// //     console.log(num1 + num2)
+// // }
+// // add3()
 
 
-// console.log(name)
-// var name = "Raju"
 
-// functions
+// // function add(num1, num2)
+// // {
+// //     console.log(num1 + num2)
+// // }
+// // add(10, 20)
+// // add(30, 40)
 
-// we can create function in 3 ways
-// 1) Using function declaration
-// 2) Using function expression
-// 3) Using arrow function
+// // Function Expression
 
-// 1) Function Declaration
-// Create a function that performs addition between 2 numbers
+// // let add = function(num1, num2)
+// // {
+// //     console.log(num1 + num2)
+// // }
 
-// function add1(){
-//     let num1 = 10
-//     let num2 = 20
-//     console.log(num1 + num2)
+// // add(10, 20)
+// // add(30, 40)
+
+// // Diff
+
+// // add(10, 20)
+
+// // function add(num1, num2)
+// // {
+// //     console.log(num1 + num2)
+// // }
+
+
+// // let add = function(num1, num2)
+// // {
+// //     console.log(num1 + num2)
+// // }
+
+// // add(10, 20)
+// // add(30, 40)
+
+
+// // add(10, 20)
+// // add(30, 40)
+
+// // var add = function(num1, num2)
+// // {
+// //     console.log(num1 + num2)
+// // }
+
+
+
+
+// // var add = (num1, num2) =>
+// // {
+// //     console.log(num1 + num2)
+// // }
+
+// // add(10, 20)
+// // add(30, 40)
+
+
+// // var add = function(num1, num2)
+// // {
+// //     return num1 + num2
+// // }
+
+// // const output = add(10, 20)
+// // console.log(output)
+
+// // var add = (num1, num2) => num1 + num2
+
+// // const output = add(100, 200)
+// // console.log(output)
+
+
+
+// // store the names of 5 students
+// // let studentNames = [ "Raju", "Ramu", "John", "Mary", "Mark" ]
+// // console.log(studentNames)
+
+// // for loop
+
+// // let comments = []
+
+// // for(let i = 1; i < 6; i++)
+// // {
+// //     let enteredComment = prompt("Enter the comment:")
+// //     comments.push(enteredComment)
+// //     // comments.unshift(enteredComment)
+// // }
+
+// // console.log(comments)
+
+// // Take an array that contains the salaries of an employee=,
+// // and return the new salary with 5000 bonus for each employee
+
+// // whenever we have a requirement to perform same opertaion
+// // on each and every element present in the array ==> forEach()
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // salaries.forEach((a, b, c)=>
+// // {
+// //     console.log(a)
+// //     console.log(b)
+// //     console.log(c)
+// // })
+
+// // map()
+// // Map() and forEach() 99.99% same
+
+// // map() ==> rule
+// // input elements count == output elements count
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // const result = salaries.map((a, b, c)=>
+// // {
+// //    if(a > 47000)
+// //    {
+// //         return a + 5000
+// //    }
+// // })
+
+// // console.log(result)
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// //  salaries.forEach((a, b, c)=>
+// // {
+// //     console.log(a + 5000)
+// // })
+
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // const result = salaries.filter((a, b, c)=>
+// // {
+// //    if(a > 47000)
+// //    {
+// //         return a + 5000
+// //    }
+// // })
+
+// // console.log(result)
+
+// // map() will maintain input and output array elements
+// // count to be same and it can perform operation
+// // on each element
+
+// // filter() will maintain input and output array elements
+// // count to be different OR can be different
+
+
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // const result = salaries.map((a, b, c)=>
+// // {
+// //    if(a > 47000)
+// //    {
+// //         return a + 5000
+// //    }
+// // })
+
+// // const anotherResult = result.filter(function(a)
+// // {
+// //     if(a != undefined)
+// //     {
+// //         return a
+// //     }
+// // })
+
+// // console.log(anotherResult)
+// // // [undefined, undefined, 55000, 65000, undefined]
+
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // const anotherResult = salaries.map((a, b, c)=>
+// // {
+// //    if(a > 47000)
+// //    {
+// //         return a + 5000
+// //    }
+// // }).filter(function(a)
+// // {
+// //     if(a != undefined)
+// //     {
+// //         return a
+// //     }
+// // })
+
+// // console.log(anotherResult)
+
+
+// // Find the total amount of all the prices present inside
+// // the cart
+// // let cartPrices = [ 230, 450, 100, 290, 500 ]
+
+// // const finalResult = cartPrices.reduce(function(accumulator, currentValue)
+// // {
+// //     return accumulator + currentValue
+// // }, 1000)
+
+// // console.log(finalResult)
+
+
+// // sort()
+
+// // const data = [ "Raju", "Ramu", "John", "Mary" ]
+// // const sortedOutput = data.sort()
+// // console.log(sortedOutput)
+
+// // const data = [ 10, 30, 3, 300, 100, 1, 55 ]
+// // const sortedOutput = data.sort()
+// // console.log(sortedOutput)
+
+// // -ve ==> dont swap the numbers
+// // +ve ==> swap the numbers
+
+
+// // const data = [ 10, 30, 3, 300, 100, 1, 55 ]
+
+// // const sortedOutput = data.sort(function(a, b)
+// // {
+// //     return b - a
+// // })
+
+// // console.log(sortedOutput)
+
+// // every() and some() ==> return boolean(true OR false)
+
+// // const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
+
+// // const result = salaries.every((a, b, c)=>
+// // {
+// //    if(a > 7000)
+// //    {
+// //         return a + 5000
+// //    }
+// // })
+
+// // console.log(result)
+
+
+// // const shoppingCart = [ 3400, 4500, 280 ]
+
+// // const status = shoppingCart.every(function(a)
+// // {
+// //     return a > 500
+// // })
+
+// // if(status == true)
+// // {
+// //      console.log("Please enter the coupon Welcome10 to get 10% discount")
+// // }
+// // else
+// // {
+// //     console.log("Discount not available!")
+// // }
+
+// // const shoppingCart = [ 3400, 450, 280 ]
+
+// // const status = shoppingCart.some(function(a)
+// // {
+// //     return a > 500
+// // })
+
+// // if(status == true)
+// // {
+// //      console.log("Please enter the coupon Welcome10 to get 10% discount")
+// // }
+// // else
+// // {
+// //     console.log("Discount not available!")
+// // }
+
+// // const data = [ 10, 20, 30, 40, 50 ]
+// // data.pop()
+// // data.pop()
+// // data.pop()
+// // data.pop()
+// // data.pop()
+// // console.log(data)
+
+// // const data = [ 10, 20, 30, 40, 50 ]
+// // data.shift()
+// // console.log(data)
+
+// // const products = [ "laptop", "mobile", "books", 
+// //     "shoes", "shirt", "cooker", "stove",
+// //     "fridge", "drum", "bottle", "iron box",
+// //     "makeup kit"
+// //  ]
+
+
+// // function getProducts(pageNo)
+// // {
+// //     console.log(products.slice((pageNo - 1) * 4, 4 * pageNo))
+// // }
+
+// // getProducts(1)
+// // getProducts(2)
+// // getProducts(3)
+
+
+// // pageNo = 1 ==> start = 0, stop = 4
+// // pageNo = 2 ==> start = 4, stop = 8
+// // pageNo = 3 ==> start = 8, stop = 12
+
+
+
+// // const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// // seatsBooked.splice(1, 2, "seat removed")
+// // console.log(seatsBooked)
+
+
+// // const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// // console.log(seatsBooked.includes("A4"))
+
+// // const seatsBooked = [ "A1", "A2", "A3", "A4" ]
+// // console.log(seatsBooked.toString())
+// // "A1,A2,A3,A4" ==> "A1A2A3A4"
+
+// // const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
+// // console.log(seatsBooked.indexOf("A2"))
+// // console.log(seatsBooked.lastIndexOf("A2"))
+
+// // const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
+// // console.log(seatsBooked.length)
+
+// // const seatsBooked = [ "Raju", "Ramu", "lives", "together", "sadly"]
+
+// // const result = seatsBooked.join(" ")
+
+// // console.log(result)
+
+// const chatMessages = [
+//   "how are you?",
+//   "where are you?",
+//   "had food",
+//   "had lunch",
+//   "had dinner",
+//   "miss you!",
+//   "you miss me?",
+//   "what are you doing?",
+//   "did you sleep?",
+//   "good morning!",
+//   "good night!",
+//   "take care",
+//   "call me",
+//   "text me when free",
+//   "let’s meet soon",
+//   "are you busy?",
+//   "had breakfast?",
+//   "what’s up?",
+//   "long time no see",
+//   "feeling sleepy",
+//   "going out?",
+//   "come online",
+//   "why not replying?",
+//   "love you ❤️",
+//   "I’m bored",
+//   "watching TV",
+//   "listening to music",
+//   "studying now",
+//   "I’m at work",
+//   "I’m at home",
+//   "let’s go for coffee",
+//   "movie plan?",
+//   "where to meet?",
+//   "what’s the time?",
+//   "send me pic",
+//   "video call?",
+//   "message me later",
+//   "are you angry?",
+//   "sorry 😔",
+//   "thank you!",
+//   "welcome back",
+//   "feeling happy",
+//   "feeling sad",
+//   "don’t worry",
+//   "good luck!",
+//   "all the best",
+//   "congratulations!",
+//   "proud of you",
+//   "see you soon"
+// ];
+
+// console.log(chatMessages.slice(-5))
+
+
+// const studentsData = {
+//     name: "Raju",
+//     age: 30,
+//     city: "Mumbai",
+//     500: "Hello"
 // }
-// add1()
 
-// function add2(){
-//     let num1 = 30
-//     let num2 = 40
-//     console.log(num1 + num2)
-// }
-// add2()
-
-// function add3(){
-//     let num1 = 50
-//     let num2 = 60
-//     console.log(num1 + num2)
-// }
-// add3()
+// console.log(studentsData)
 
 
+// MAP
 
-// function add(num1, num2)
+// const myMap = new Map() // myMap = {}
+
+// myMap.set("name", "Raju")
+// myMap.set(100, "Hello")
+// myMap.set("age", 30)
+
+// console.log(myMap.get("name"))
+// console.log(myMap.values())
+// console.log(myMap.keys())
+// console.log(myMap.has(1000))
+
+
+// let nums = [2, 11, 7, 15]
+// const mymap = new Map()
+// let target = 9
+
+// // { 2 ==> 0, 11 ==> 1 }
+// let output = []
+
+// for(let i = 0; i < nums.length; i++)
 // {
-//     console.log(num1 + num2)
-// }
-// add(10, 20)
-// add(30, 40)
-
-// Function Expression
-
-// let add = function(num1, num2)
-// {
-//     console.log(num1 + num2)
-// }
-
-// add(10, 20)
-// add(30, 40)
-
-// Diff
-
-// add(10, 20)
-
-// function add(num1, num2)
-// {
-//     console.log(num1 + num2)
-// }
-
-
-// let add = function(num1, num2)
-// {
-//     console.log(num1 + num2)
-// }
-
-// add(10, 20)
-// add(30, 40)
-
-
-// add(10, 20)
-// add(30, 40)
-
-// var add = function(num1, num2)
-// {
-//     console.log(num1 + num2)
-// }
-
-
-
-
-// var add = (num1, num2) =>
-// {
-//     console.log(num1 + num2)
-// }
-
-// add(10, 20)
-// add(30, 40)
-
-
-// var add = function(num1, num2)
-// {
-//     return num1 + num2
-// }
-
-// const output = add(10, 20)
-// console.log(output)
-
-// var add = (num1, num2) => num1 + num2
-
-// const output = add(100, 200)
-// console.log(output)
-
-
-
-// store the names of 5 students
-// let studentNames = [ "Raju", "Ramu", "John", "Mary", "Mark" ]
-// console.log(studentNames)
-
-// for loop
-
-// let comments = []
-
-// for(let i = 1; i < 6; i++)
-// {
-//     let enteredComment = prompt("Enter the comment:")
-//     comments.push(enteredComment)
-//     // comments.unshift(enteredComment)
-// }
-
-// console.log(comments)
-
-// Take an array that contains the salaries of an employee=,
-// and return the new salary with 5000 bonus for each employee
-
-// whenever we have a requirement to perform same opertaion
-// on each and every element present in the array ==> forEach()
-
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-// salaries.forEach((a, b, c)=>
-// {
-//     console.log(a)
-//     console.log(b)
-//     console.log(c)
-// })
-
-// map()
-// Map() and forEach() 99.99% same
-
-// map() ==> rule
-// input elements count == output elements count
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-// const result = salaries.map((a, b, c)=>
-// {
-//    if(a > 47000)
-//    {
-//         return a + 5000
-//    }
-// })
-
-// console.log(result)
-
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-//  salaries.forEach((a, b, c)=>
-// {
-//     console.log(a + 5000)
-// })
-
-
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-// const result = salaries.filter((a, b, c)=>
-// {
-//    if(a > 47000)
-//    {
-//         return a + 5000
-//    }
-// })
-
-// console.log(result)
-
-// map() will maintain input and output array elements
-// count to be same and it can perform operation
-// on each element
-
-// filter() will maintain input and output array elements
-// count to be different OR can be different
-
-
-
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-// const result = salaries.map((a, b, c)=>
-// {
-//    if(a > 47000)
-//    {
-//         return a + 5000
-//    }
-// })
-
-// const anotherResult = result.filter(function(a)
-// {
-//     if(a != undefined)
+//     let result = target - nums[i] // 9 - 7 ==> 2
+//     if(mymap.has(result))
 //     {
-//         return a
+//         output.push(mymap.get(result))
+//         output.push(i)
+//         console.log(output)
 //     }
-// })
+//     else
+//     {
+//         mymap.set(nums[i], i)
+//     }
+// }
 
-// console.log(anotherResult)
-// // [undefined, undefined, 55000, 65000, undefined]
 
 
-const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
 
-const anotherResult = salaries.map((a, b, c)=>
+// let data = "Bangalore is a country"
+// console.log(data.replace("country", "city"))
+// console.log(data.charCodeAt(6))
+
+// const updatedData = data.concat(" and is always raining")
+// console.log(updatedData)
+// const output = data.split(" ")
+// console.log(output)
+// console.log(data.length)
+// console.log(data.startsWith("Bang"))
+// console.log(data.endsWith("Bang"))
+// console.log(data.substring(1, 6))
+// console.log(data.includes("city"))
+// console.log(data.indexOf("Bangalore"))
+
+
+// input = [ "Bangalore is a city" ]
+// output = [ "erolagnaB si a ytic" ]
+
+// input = S74G5TY
+// output = SGTY
+
+
+
+// output = [ [ "eat", "tea", "ate"], [ "tan", "nat"], ["bat"] ]
+
+function groupAnagram(strs)
 {
-   if(a > 47000)
-   {
-        return a + 5000
-   }
-}).filter(function(a)
-{
-    if(a != undefined)
+    let anagramObj = {}
+
+    // for of
+    for(let str of strs)
     {
-        return a
+        // "eat".split() ==> [ "e", "a", "t" ] ==> [ "a", "e", "t" ]
+        // [ "a", "e", "t" ] ==> "aet"
+
+        // [ "eat", "tea", "tan", "ate", "nat", "bat" ]
+        let sortedStr = str.split("").sort().join("")
+        // sortedStr = "aet"
+        
+        if(!anagramObj[sortedStr])
+        {
+            anagramObj[sortedStr] = [str]
+            // aet: [eat, tea, ate]
+            ant: [tan]
+        }
+        else
+        {
+            anagramObj[sortedStr].push(str)
+        }
+        
+        
+        // anagramObj[aet] = [eat]
+        // anagramObj = { aet: [eat, tea]}
+        
     }
-})
 
-console.log(anotherResult)
-
-
-
-const shoppingCart = [ 3400, 450, 280 ]
-
-const status = shoppingCart.some(function(a)
-{
-    return a > 500
-})
-
-if(status == true)
-{
-     console.log("Please enter the coupon Welcome10 to get 10% discount")
-}
-else
-{
-    console.log("Discount not available!")
+    return Object.values(anagramObj)
+    
 }
 
-
-==============================================================================
-// sort()
-
-// const data = [ "Raju", "Ramu", "John", "Mary" ]
-// const sortedOutput = data.sort()
-// console.log(sortedOutput)
-
-// const data = [ 10, 30, 3, 300, 100, 1, 55 ]
-// const sortedOutput = data.sort()
-// console.log(sortedOutput)
-
-// -ve ==> dont swap the numbers
-// +ve ==> swap the numbers
-
-
-// const data = [ 10, 30, 3, 300, 100, 1, 55 ]
-
-// const sortedOutput = data.sort(function(a, b)
-// {
-//     return b - a
-// })
-
-// console.log(sortedOutput)
-
-// every() and some() ==> return boolean(true OR false)
-
-// const salaries = [ 45000, 32000, 50000, 60000, 15000 ]
-
-// const result = salaries.every((a, b, c)=>
-// {
-//    if(a > 7000)
-//    {
-//         return a + 5000
-//    }
-// })
-
-// console.log(result)
-
-
-// const shoppingCart = [ 3400, 4500, 280 ]
-
-// const status = shoppingCart.every(function(a)
-// {
-//     return a > 500
-// })
-
-// if(status == true)
-// {
-//      console.log("Please enter the coupon Welcome10 to get 10% discount")
-// }
-// else
-// {
-//     console.log("Discount not available!")
-// }
-
-// const shoppingCart = [ 3400, 450, 280 ]
-
-// const status = shoppingCart.some(function(a)
-// {
-//     return a > 500
-// })
-
-// if(status == true)
-// {
-//      console.log("Please enter the coupon Welcome10 to get 10% discount")
-// }
-// else
-// {
-//     console.log("Discount not available!")
-// }
-
-// const data = [ 10, 20, 30, 40, 50 ]
-// data.pop()
-// data.pop()
-// data.pop()
-// data.pop()
-// data.pop()
-// console.log(data)
-
-// const data = [ 10, 20, 30, 40, 50 ]
-// data.shift()
-// console.log(data)
-
-// const products = [ "laptop", "mobile", "books", 
-//     "shoes", "shirt", "cooker", "stove",
-//     "fridge", "drum", "bottle", "iron box",
-//     "makeup kit"
-//  ]
-
-
-// function getProducts(pageNo)
-// {
-//     console.log(products.slice((pageNo - 1) * 4, 4 * pageNo))
-// }
-
-// getProducts(1)
-// getProducts(2)
-// getProducts(3)
-
-
-// pageNo = 1 ==> start = 0, stop = 4
-// pageNo = 2 ==> start = 4, stop = 8
-// pageNo = 3 ==> start = 8, stop = 12
-
-
-
-// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
-// seatsBooked.splice(1, 2, "seat removed")
-// console.log(seatsBooked)
-
-
-// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
-// console.log(seatsBooked.includes("A4"))
-
-// const seatsBooked = [ "A1", "A2", "A3", "A4" ]
-// console.log(seatsBooked.toString())
-// "A1,A2,A3,A4" ==> "A1A2A3A4"
-
-// const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
-// console.log(seatsBooked.indexOf("A2"))
-// console.log(seatsBooked.lastIndexOf("A2"))
-
-// const seatsBooked = [ "A1", "A2", "A3", "A4", "A2" ]
-// console.log(seatsBooked.length)
-
-// const seatsBooked = [ "Raju", "Ramu", "lives", "together", "sadly"]
-
-// const result = seatsBooked.join(" ")
-
-// console.log(result)
-
-const chatMessages = [
-  "how are you?",
-  "where are you?",
-  "had food",
-  "had lunch",
-  "had dinner",
-  "miss you!",
-  "you miss me?",
-  "what are you doing?",
-  "did you sleep?",
-  "good morning!",
-  "good night!",
-  "take care",
-  "call me",
-  "text me when free",
-  "let’s meet soon",
-  "are you busy?",
-  "had breakfast?",
-  "what’s up?",
-  "long time no see",
-  "feeling sleepy",
-  "going out?",
-  "come online",
-  "why not replying?",
-  "love you ❤️",
-  "I’m bored",
-  "watching TV",
-  "listening to music",
-  "studying now",
-  "I’m at work",
-  "I’m at home",
-  "let’s go for coffee",
-  "movie plan?",
-  "where to meet?",
-  "what’s the time?",
-  "send me pic",
-  "video call?",
-  "message me later",
-  "are you angry?",
-  "sorry 😔",
-  "thank you!",
-  "welcome back",
-  "feeling happy",
-  "feeling sad",
-  "don’t worry",
-  "good luck!",
-  "all the best",
-  "congratulations!",
-  "proud of you",
-  "see you soon"
-];
-
-console.log(chatMessages.slice(-5))
+const result = groupAnagram([ "eat", "tea", "tan", "ate", "nat", "bat" ])
+console.log(result)
