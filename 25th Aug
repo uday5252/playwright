@@ -265,3 +265,18 @@ console.log(anotherResult)
 
 
 
+const shoppingCart = [ 3400, 450, 280 ]
+
+const status = shoppingCart.some(function(a)
+{
+    return a > 500
+})
+
+if(status == true)
+{
+     console.log("Please enter the coupon Welcome10 to get 10% discount")
+}
+else
+{
+    console.log("Discount not available!")
+}
