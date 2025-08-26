@@ -1,0 +1,32 @@
+
+function uniqueCharacter(strs)
+{
+    // strs = "leetcode"
+    let uniqueMap = new Map() // ==> {  l: 1, e: 1 }
+    
+    for(let i = 0; i < strs.length; i++)
+    {
+        if(!uniqueMap.has(strs[i])) 
+            {
+                uniqueMap.set(strs[i], 1)
+            }      
+        else{
+            uniqueMap.set(strs[i] ,uniqueMap.get(strs[i]) + 1 )
+        } 
+    }
+
+    for(let i = 0; i < strs.length; i++)
+    {
+        if(uniqueMap.has(strs[i]) && uniqueMap.get(strs[i]) == 1)
+        {
+            // we got the unique character
+            return i
+        }
+    }
+
+    return -1
+
+}
+
+const result = uniqueCharacter("Lleetcode".toLowerCase())
+console.log(result)
