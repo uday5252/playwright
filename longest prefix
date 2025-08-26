@@ -1,0 +1,28 @@
+
+function longestPrefix(strs)
+{
+    let prefix = strs[0]
+
+    for(let i = 1; i < strs.length; i++)
+    {
+        while(true)
+        {
+            if(strs[i].indexOf(prefix) == 0)
+            {
+                break
+            }
+            else
+            {
+                prefix = prefix.slice(0, -1)
+            }
+        }
+    }
+
+    return prefix
+
+}
+
+const result = 
+longestPrefix(["flower", "abcflow", "flight"])
+
+console.log(result)
