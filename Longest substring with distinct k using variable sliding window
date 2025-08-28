@@ -1,0 +1,61 @@
+function distinctSubstring(strs, k)
+{
+    // strs = "ihisisalaongx"
+    // k = 4
+
+    let windowStart = 0
+    let windowEnd = 0
+    let windowLength = 0 //windowSum
+    let maxLength = 0 // maxSum // 1
+    let distinctMap = new Map()
+    // { i: 3, h: 1, ..... }
+
+    for(windowEnd = 0; windowEnd < strs.length; windowEnd++)
+    {
+        // windowStart = 0, windowEnd = 0 ==> i
+        // condition ==> key is already existed or not
+       
+            if(!distinctMap.has(strs[windowEnd]))
+            {
+                // key(character) is not available
+                distinctMap.set(strs[windowEnd], 1)
+            }
+            else
+            {
+                distinctMap.set(strs[windowEnd],
+                distinctMap.get(strs[windowEnd]) + 1)
+            }
+       
+            if(distinctMap.size > k)
+            {
+                // first update the map's value
+                distinctMap.set(strs[windowStart],
+                distinctMap.get(strs[windowStart]) - 1)
+
+                if(distinctMap.get(strs[windowStart]) == 0)
+                {
+                    distinctMap.delete(strs[windowStart])
+                }
+
+                // { i: 3, h: 1} ==> {i: 2, h: 1}
+                windowStart++
+            }
+
+            // track the length of the map
+           maxLength = Math.max(maxLength, windowEnd - windowStart + 1)
+           
+        
+        // windowStart = 0, windowEnd = 1 ==> i
+        // windowStart = 0, windowEnd = 2 ==> ih
+        // windowStart = 0, windowEnd = 3 ==> ihis
+        // windowStart = 0, windowEnd = 4 ==> ihisi
+        // ........................................
+    }
+
+    console.log(maxLength)
+ 
+    
+    
+}
+
+distinctSubstring("ithankyoualong", 13)
