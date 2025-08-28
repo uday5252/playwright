@@ -1,0 +1,41 @@
+
+
+Problem Statement
+
+John is preparing for an exam. He has a list of questions, and each question carries certain marks.
+He can attempt a **continuous sequence of questions** (subarray), but there is one restriction:
+
+* John **cannot attempt two questions that have the same marks** within his chosen sequence.
+
+Your task is to help John find the **maximum total marks** he can obtain by attempting such a valid sequence of questions.
+
+
+Input Format
+
+* The first line contains an integer `N`, the number of questions.
+* The second line contains `N` integers, where the `i-th` integer represents the marks of the `i-th` question.
+
+
+Output Format
+
+* Print a single integer — the maximum marks John can obtain.
+
+---
+
+Constraints
+
+* `1 ≤ N ≤ 10^5`
+* `1 ≤ Marks[i] ≤ 10^4`
+
+---
+
+Sample Input
+
+```
+5  
+4 2 4 5 6
+```
+
+Sample Output
+
+17
