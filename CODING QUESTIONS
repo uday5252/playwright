@@ -1,8 +1,12 @@
 
-1. Valid Palindrome (#125)
-Check if string reads the same forwards and backwards.
+---
+
+ 1. Valid Palindrome (#125)
+
+Description: Check if string reads the same forwards and backwards.
+
+```javascript
 var isPalindrome = function(s) {
-    // Remove non-alphanumeric manually (no regex)
     let cleaned = "";
     for (let char of s) {
         let code = char.toLowerCase().charCodeAt(0);
@@ -23,12 +27,17 @@ var isPalindrome = function(s) {
 // Example
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 console.log(isPalindrome("race a car")); // false
+```
 
-2. Implement strStr() (#28)
-Find first occurrence of substring.
+---
+
+ 2. Implement strStr() (#28)
+
+Description: Find first occurrence of substring.
+
+```javascript
 var strStr = function(haystack, needle) {
     if (needle === "") return 0;
-
     for (let i = 0; i <= haystack.length - needle.length; i++) {
         let match = true;
         for (let j = 0; j < needle.length; j++) {
@@ -45,12 +54,15 @@ var strStr = function(haystack, needle) {
 // Example
 console.log(strStr("hello", "ll")); // 2
 console.log(strStr("aaaaa", "bba")); // -1
+```
 
-3. Longest Common Prefix (#14)
-Find the longest prefix shared by all strings.
+---
+
+ 3. Longest Common Prefix (#14)
+
+```javascript
 var longestCommonPrefix = function(strs) {
     if (!strs.length) return "";
-
     let prefix = strs[0];
     for (let i = 1; i < strs.length; i++) {
         while (strs[i].slice(0, prefix.length) !== prefix) {
@@ -64,9 +76,13 @@ var longestCommonPrefix = function(strs) {
 // Example
 console.log(longestCommonPrefix(["flower","flow","flight"])); // "fl"
 console.log(longestCommonPrefix(["dog","racecar","car"])); // ""
+```
 
-4. Reverse String (#344)
-Reverse an array of characters in place.
+---
+
+ 4. Reverse String (#344)
+
+```javascript
 var reverseString = function(s) {
     let left = 0, right = s.length - 1;
     while (left < right) {
@@ -79,9 +95,13 @@ var reverseString = function(s) {
 
 // Example
 console.log(reverseString(["h","e","l","l","o"])); // ["o","l","l","e","h"]
+```
 
-5. First Unique Character in a String (#387)
-Find index of first non-repeating character.
+---
+
+ 5. First Unique Character in a String (#387)
+
+```javascript
 var firstUniqChar = function(s) {
     let map = {};
     for (let char of s) {
@@ -97,9 +117,13 @@ var firstUniqChar = function(s) {
 console.log(firstUniqChar("leetcode")); // 0
 console.log(firstUniqChar("loveleetcode")); // 2
 console.log(firstUniqChar("aabb")); // -1
+```
 
-6. Ransom Note (#383)
-Can ransomNote be constructed from magazine?
+---
+
+ 6. Ransom Note (#383)
+
+```javascript
 var canConstruct = function(ransomNote, magazine) {
     let map = {};
     for (let char of magazine) {
@@ -116,16 +140,17 @@ var canConstruct = function(ransomNote, magazine) {
 console.log(canConstruct("a", "b")); // false
 console.log(canConstruct("aa", "ab")); // false
 console.log(canConstruct("aa", "aab")); // true
+```
 
-7. Valid Anagram (#242)
-Check if two strings are anagrams.
+---
+
+ 7. Valid Anagram (#242)
+
+```javascript
 var isAnagram = function(s, t) {
     if (s.length !== t.length) return false;
     let map = {};
-
-    for (let char of s) {
-        map[char] = (map[char] || 0) + 1;
-    }
+    for (let char of s) map[char] = (map[char] || 0) + 1;
     for (let char of t) {
         if (!map[char]) return false;
         map[char]--;
@@ -136,14 +161,17 @@ var isAnagram = function(s, t) {
 // Example
 console.log(isAnagram("anagram", "nagaram")); // true
 console.log(isAnagram("rat", "car")); // false
+```
 
+---
 
-8. Group Anagrams (#49)
-Group words that are anagrams.
+ 8. Group Anagrams (#49)
+
+```javascript
 var groupAnagrams = function(strs) {
     let map = {};
     for (let str of strs) {
-        let key = str.split("").sort().join(""); // sorted string as key
+        let key = str.split("").sort().join("");
         if (!map[key]) map[key] = [];
         map[key].push(str);
     }
@@ -152,14 +180,16 @@ var groupAnagrams = function(strs) {
 
 // Example
 console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]));
-// [["eat","tea","ate"],["tan","nat"],["bat"]]
+```
 
-9. Longest Substring Without Repeating Characters (#3)
-Find length of the longest substring without repeating characters.
+---
+
+ 9. Longest Substring Without Repeating Characters (#3)
+
+```javascript
 var lengthOfLongestSubstring = function(s) {
     let set = new Set();
     let left = 0, maxLen = 0;
-
     for (let right = 0; right < s.length; right++) {
         while (set.has(s[right])) {
             set.delete(s[left]);
@@ -172,17 +202,19 @@ var lengthOfLongestSubstring = function(s) {
 };
 
 // Example
-console.log(lengthOfLongestSubstring("abcabcbb")); // 3 ("abc")
-console.log(lengthOfLongestSubstring("bbbbb"));    // 1 ("b")
-console.log(lengthOfLongestSubstring("pwwkew"));   // 3 ("wke")
+console.log(lengthOfLongestSubstring("abcabcbb")); // 3
+console.log(lengthOfLongestSubstring("bbbbb"));    // 1
+console.log(lengthOfLongestSubstring("pwwkew"));   // 3
+```
 
-10. Longest Palindromic Substring (#5)
-Find the longest palindromic substring.
+---
+
+ 10. Longest Palindromic Substring (#5)
+
+```javascript
 var longestPalindrome = function(s) {
     if (s.length < 2) return s;
-
     let start = 0, maxLen = 1;
-
     function expand(l, r) {
         while (l >= 0 && r < s.length && s[l] === s[r]) {
             if (r - l + 1 > maxLen) {
@@ -192,100 +224,94 @@ var longestPalindrome = function(s) {
             l--; r++;
         }
     }
-
     for (let i = 0; i < s.length; i++) {
-        expand(i, i);     // odd length
-        expand(i, i + 1); // even length
+        expand(i, i);
+        expand(i, i + 1);
     }
-
     return s.substring(start, start + maxLen);
 };
 
 // Example
 console.log(longestPalindrome("babad")); // "bab" or "aba"
 console.log(longestPalindrome("cbbd"));  // "bb"
+```
 
-11. Palindromic Substrings (#647)
-Count how many substrings are palindromes.
+---
+
+ 11. Palindromic Substrings (#647)
+
+```javascript
 var countSubstrings = function(s) {
     let count = 0;
-
     function expand(l, r) {
         while (l >= 0 && r < s.length && s[l] === s[r]) {
             count++;
             l--; r++;
         }
     }
-
     for (let i = 0; i < s.length; i++) {
-        expand(i, i);     // odd
-        expand(i, i + 1); // even
+        expand(i, i);
+        expand(i, i + 1);
     }
-
     return count;
 };
 
 // Example
-console.log(countSubstrings("abc")); // 3 ("a","b","c")
-console.log(countSubstrings("aaa")); // 6 ("a","a","a","aa","aa","aaa")
+console.log(countSubstrings("abc")); // 3
+console.log(countSubstrings("aaa")); // 6
+```
 
-12. Permutation in String (#567)
-Check if one string contains a permutation of the other.
+---
+
+ 12. Permutation in String (#567)
+
+```javascript
 var checkInclusion = function(s1, s2) {
     if (s1.length > s2.length) return false;
-
-    let count1 = new Array(26).fill(0);
-    let count2 = new Array(26).fill(0);
-
+    let count1 = Array(26).fill(0);
+    let count2 = Array(26).fill(0);
     for (let i = 0; i < s1.length; i++) {
-        count1[s1.charCodeAt(i) - 97]++;
-        count2[s2.charCodeAt(i) - 97]++;
+        count1[s1.charCodeAt(i)-97]++;
+        count2[s2.charCodeAt(i)-97]++;
     }
-
     function matches() {
-        for (let i = 0; i < 26; i++) {
-            if (count1[i] !== count2[i]) return false;
-        }
-        return true;
+        return count1.every((v, i) => v === count2[i]);
     }
-
     for (let i = s1.length; i < s2.length; i++) {
         if (matches()) return true;
-        count2[s2.charCodeAt(i) - 97]++;
-        count2[s2.charCodeAt(i - s1.length) - 97]--;
+        count2[s2.charCodeAt(i)-97]++;
+        count2[s2.charCodeAt(i-s1.length)-97]--;
     }
-
     return matches();
 };
 
 // Example
-console.log(checkInclusion("ab", "eidbaooo")); // true ("ba")
+console.log(checkInclusion("ab", "eidbaooo")); // true
 console.log(checkInclusion("ab", "eidboaoo")); // false
-
+```
+Perfect! Here’s the continuation with #13–#20 + extra 6 string/array challenges, properly formatted:
+________________________________________
 13. Find All Anagrams in a String (#438)
 var findAnagrams = function(s, p) {
     let res = [];
     if (p.length > s.length) return res;
 
-    let countP = new Array(26).fill(0);
-    let countS = new Array(26).fill(0);
+    let countP = Array(26).fill(0);
+    let countS = Array(26).fill(0);
 
     for (let i = 0; i < p.length; i++) {
-        countP[p.charCodeAt(i) - 97]++;
-        countS[s.charCodeAt(i) - 97]++;
+        countP[p.charCodeAt(i)-97]++;
+        countS[s.charCodeAt(i)-97]++;
     }
 
     function matches() {
-        for (let i = 0; i < 26; i++) {
-            if (countP[i] !== countS[i]) return false;
-        }
-        return true;
+        return countP.every((v, i) => v === countS[i]);
     }
 
     for (let i = p.length; i < s.length; i++) {
         if (matches()) res.push(i - p.length);
-        countS[s.charCodeAt(i) - 97]++;
-        countS[s.charCodeAt(i - p.length) - 97]--;
+        countS[s.charCodeAt(i)-97]++;
+        countS[s.charCodeAt(i - p.length)-97]--;
     }
     if (matches()) res.push(s.length - p.length);
 
@@ -295,50 +321,44 @@ var findAnagrams = function(s, p) {
 // Example
 console.log(findAnagrams("cbaebabacd", "abc")); // [0,6]
 console.log(findAnagrams("abab", "ab"));        // [0,1,2]
-
+________________________________________
 14. Minimum Window Substring (#76)
 var minWindow = function(s, t) {
     if (t.length > s.length) return "";
 
     let need = {};
-    for (let char of t) {
-        need[char] = (need[char] || 0) + 1;
-    }
+    for (let char of t) need[char] = (need[char] || 0) + 1;
 
-    let left = 0, right = 0, have = 0, needCount = Object.keys(need).length;
-    let window = {}, res = [-1, -1], resLen = Infinity;
+    let left = 0, right = 0, have = 0;
+    let needCount = Object.keys(need).length;
+    let window = {}, res = [-1,-1], resLen = Infinity;
 
     while (right < s.length) {
         let c = s[right];
         window[c] = (window[c] || 0) + 1;
 
-        if (c in need && window[c] === need[c]) {
-            have++;
-        }
+        if (c in need && window[c] === need[c]) have++;
 
         while (have === needCount) {
-            if ((right - left + 1) < resLen) {
-                res = [left, right];
-                resLen = right - left + 1;
+            if ((right-left+1) < resLen) {
+                res = [left,right];
+                resLen = right-left+1;
             }
             window[s[left]]--;
-            if (s[left] in need && window[s[left]] < need[s[left]]) {
-                have--;
-            }
+            if (s[left] in need && window[s[left]] < need[s[left]]) have--;
             left++;
         }
         right++;
     }
 
-    return resLen === Infinity ? "" : s.slice(res[0], res[1] + 1);
+    return resLen === Infinity ? "" : s.slice(res[0], res[1]+1);
 };
 
 // Example
 console.log(minWindow("ADOBECODEBANC", "ABC")); // "BANC"
 console.log(minWindow("a", "aa")); // ""
-
+________________________________________
 15. Rotate String (#796)
-Check if one string can become another by rotation.
 var rotateString = function(s, goal) {
     if (s.length !== goal.length) return false;
     return (s + s).includes(goal);
@@ -347,27 +367,23 @@ var rotateString = function(s, goal) {
 // Example
 console.log(rotateString("abcde", "cdeab")); // true
 console.log(rotateString("abcde", "abced")); // false
-
+________________________________________
 16. Substring with Concatenation of All Words (#30)
-Find all starting indices of substrings formed by concatenating all given words.
 var findSubstring = function(s, words) {
     if (!s || !words.length) return [];
 
     let wordLen = words[0].length;
-    let totalLen = wordLen * words.length;
+    let totalLen = wordLen  words.length;
     let wordMap = {};
 
-    for (let word of words) {
-        wordMap[word] = (wordMap[word] || 0) + 1;
-    }
+    for (let word of words) wordMap[word] = (wordMap[word] || 0) + 1;
 
     let res = [];
-
     for (let i = 0; i <= s.length - totalLen; i++) {
         let seen = {};
         let j = 0;
         while (j < words.length) {
-            let word = s.substr(i + j * wordLen, wordLen);
+            let word = s.substr(i + j  wordLen, wordLen);
             if (!(word in wordMap)) break;
             seen[word] = (seen[word] || 0) + 1;
             if (seen[word] > wordMap[word]) break;
@@ -381,124 +397,95 @@ var findSubstring = function(s, words) {
 // Example
 console.log(findSubstring("barfoothefoobarman", ["foo","bar"])); // [0,9]
 console.log(findSubstring("wordgoodgoodgoodbestword", ["word","good","best","word"])); // []
-
+________________________________________
 17. Distinct Subsequences (#115)
-Count how many subsequences of s equal t.
 var numDistinct = function(s, t) {
     let m = s.length, n = t.length;
-    let dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+    let dp = Array.from({length:m+1}, ()=>Array(n+1).fill(0));
 
-    for (let i = 0; i <= m; i++) dp[i][0] = 1; // empty t is always a subsequence
+    for (let i=0; i<=m; i++) dp[i][0] = 1;
 
-    for (let i = 1; i <= m; i++) {
-        for (let j = 1; j <= n; j++) {
-            if (s[i - 1] === t[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
-            } else {
-                dp[i][j] = dp[i - 1][j];
-            }
+    for (let i=1; i<=m; i++) {
+        for (let j=1; j<=n; j++) {
+            if (s[i-1] === t[j-1]) dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
+            else dp[i][j] = dp[i-1][j];
         }
     }
-
     return dp[m][n];
 };
 
 // Example
-console.log(numDistinct("rabbbit", "rabbit")); // 3
-console.log(numDistinct("babgbag", "bag"));   // 5
-
+console.log(numDistinct("rabbbit","rabbit")); // 3
+console.log(numDistinct("babgbag","bag"));   // 5
+________________________________________
 18. Edit Distance (#72)
-Find minimum operations to convert word1 into word2.
 var minDistance = function(word1, word2) {
     let m = word1.length, n = word2.length;
-    let dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+    let dp = Array.from({length:m+1}, ()=>Array(n+1).fill(0));
 
-    for (let i = 0; i <= m; i++) dp[i][0] = i;
-    for (let j = 0; j <= n; j++) dp[0][j] = j;
+    for (let i=0;i<=m;i++) dp[i][0] = i;
+    for (let j=0;j<=n;j++) dp[0][j] = j;
 
-    for (let i = 1; i <= m; i++) {
-        for (let j = 1; j <= n; j++) {
-            if (word1[i - 1] === word2[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1];
-            } else {
-                dp[i][j] = 1 + Math.min(
-                    dp[i - 1][j],     // delete
-                    dp[i][j - 1],     // insert
-                    dp[i - 1][j - 1]  // replace
-                );
-            }
+    for (let i=1;i<=m;i++) {
+        for (let j=1;j<=n;j++) {
+            if (word1[i-1] === word2[j-1]) dp[i][j] = dp[i-1][j-1];
+            else dp[i][j] = 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
         }
     }
-
     return dp[m][n];
 };
 
 // Example
-console.log(minDistance("horse", "ros")); // 3 (horse → rorse → rose → ros)
-console.log(minDistance("intention", "execution")); // 5
-
+console.log(minDistance("horse","ros")); // 3
+console.log(minDistance("intention","execution")); // 5
+________________________________________
 19. Longest Valid Parentheses (#32)
-Find the length of the longest valid parentheses substring.
 var longestValidParentheses = function(s) {
-    let stack = [-1];
-    let maxLen = 0;
+    let stack = [-1], maxLen = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] === '(') {
-            stack.push(i);
-        } else {
+    for (let i=0;i<s.length;i++) {
+        if (s[i] === '(') stack.push(i);
+        else {
             stack.pop();
-            if (stack.length === 0) {
-                stack.push(i);
-            } else {
-                maxLen = Math.max(maxLen, i - stack[stack.length - 1]);
-            }
+            if (stack.length === 0) stack.push(i);
+            else maxLen = Math.max(maxLen, i - stack[stack.length-1]);
         }
     }
-
     return maxLen;
 };
 
 // Example
 console.log(longestValidParentheses("(()")); // 2
 console.log(longestValidParentheses(")()())")); // 4
-
+________________________________________
 20. Remove Invalid Parentheses (#301)
-Remove the minimum number of invalid parentheses to make string valid.
 var removeInvalidParentheses = function(s) {
-    let res = [];
-    let visited = new Set();
-    let queue = [s];
-    visited.add(s);
-    let found = false;
+    let res = [], visited = new Set([s]), queue = [s], found = false;
 
     function isValid(str) {
         let count = 0;
         for (let ch of str) {
-            if (ch === '(') count++;
-            else if (ch === ')') {
+            if (ch==='(') count++;
+            else if (ch===')') {
                 count--;
-                if (count < 0) return false;
+                if (count<0) return false;
             }
         }
-        return count === 0;
+        return count===0;
     }
 
     while (queue.length) {
         let levelSize = queue.length;
-        let level = [];
-
-        for (let i = 0; i < levelSize; i++) {
+        for (let i=0;i<levelSize;i++) {
             let str = queue.shift();
             if (isValid(str)) {
                 res.push(str);
                 found = true;
             }
             if (found) continue;
-
-            for (let j = 0; j < str.length; j++) {
-                if (str[j] !== '(' && str[j] !== ')') continue;
-                let newStr = str.slice(0, j) + str.slice(j + 1);
+            for (let j=0;j<str.length;j++) {
+                if (str[j]!=='(' && str[j]!==')') continue;
+                let newStr = str.slice(0,j)+str.slice(j+1);
                 if (!visited.has(newStr)) {
                     queue.push(newStr);
                     visited.add(newStr);
@@ -507,11 +494,106 @@ var removeInvalidParentheses = function(s) {
         }
         if (found) break;
     }
-
     return res;
 };
 
 // Example
 console.log(removeInvalidParentheses("()())()")); // ["()()()", "(())()"]
 console.log(removeInvalidParentheses("(a)())()")); // ["(a)()()", "(a())()"]
+________________________________________
+Extra Sliding Window / String Problems
+________________________________________
+1. Maximum Average Subarray of Size K
+let arr = [2, 10, 5, 6, 10, 6];
+let k = 2;
+let windowStart = 0, windowSum = 0, maxSum = 0;
+
+for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+    windowSum += arr[windowEnd];
+    if (windowEnd >= k-1) {
+        maxSum = Math.max(maxSum, windowSum);
+        windowSum -= arr[windowStart];
+        windowStart++;
+    }
+}
+
+console.log(maxSum/k); // 8
+________________________________________
+2. Longest Substring with K Distinct Characters
+function distinctSubstring(strs, k) {
+    let windowStart=0, maxLength=0;
+    let distinctMap = new Map();
+
+    for (let windowEnd=0; windowEnd<strs.length; windowEnd++) {
+        distinctMap.set(strs[windowEnd], (distinctMap.get(strs[windowEnd]) || 0)+1);
+
+        while (distinctMap.size > k) {
+            distinctMap.set(strs[windowStart], distinctMap.get(strs[windowStart])-1);
+            if (distinctMap.get(strs[windowStart]) === 0) distinctMap.delete(strs[windowStart]);
+            windowStart++;
+        }
+        maxLength = Math.max(maxLength, windowEnd - windowStart +1);
+    }
+    console.log(maxLength);
+}
+
+distinctSubstring("ithankyoualong", 13); // 14
+________________________________________
+3. Group Anagrams (Map version)
+function groupAnagram(strs) {
+    let anagramObj = new Map();
+    for(let str of strs) {
+        let sortedStr = str.split("").sort().join("");
+        if(!anagramObj.has(sortedStr)) anagramObj.set(sortedStr, [str]);
+        else anagramObj.get(sortedStr).push(str);
+    }
+    return Array.from(anagramObj.values());
+}
+
+console.log(groupAnagram(["eat","tea","tan","ate","nat","bat"]));
+________________________________________
+4. Count All Palindromic Substrings (Detailed)
+function checkPalindrome(str, left, right, palindromes) {
+    while(left >=0 && right < str.length && str[left] === str[right]) {
+        palindromes.push(str.substring(left, right+1));
+        left--; right++;
+    }
+}
+
+function countAllPalindromes(str) {
+    let palindromes = [];
+    for(let i=0;i<str.length;i++) {
+        checkPalindrome(str,i,i,palindromes);
+        checkPalindrome(str,i,i+1,palindromes);
+    }
+    console.log("Palindromes:", palindromes);
+    return palindromes.length;
+}
+
+console.log("Count:", countAllPalindromes("leveel")); // 11
+________________________________________
+5. First Unique Character (Map version)
+function uniqueCharacter(strs) {
+    let uniqueMap = new Map();
+    for(let char of strs) uniqueMap.set(char,(uniqueMap.get(char)||0)+1);
+
+    for(let i=0;i<strs.length;i++){
+        if(uniqueMap.get(strs[i])===1) return i;
+    }
+    return -1;
+}
+
+console.log(uniqueCharacter("leetcode")); // 0
+________________________________________
+6. Longest Common Prefix (Alternate)
+function longestPrefix(strs){
+    let prefix = strs[0];
+    for(let i=1;i<strs.length;i++){
+        while(strs[i].indexOf(prefix)!==0) prefix = prefix.slice(0,-1);
+    }
+    return prefix;
+}
+
+console.log(longestPrefix(["flower","flow","flight"])); // "fl"
+________________________________________
 
