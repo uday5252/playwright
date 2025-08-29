@@ -1,0 +1,79 @@
+\d
+A digit
+[0-9]
+\D
+A non-digit
+[^0-9]
+\s
+A whitespace character
+[ \t\n\x0B\f\r]
+\S
+A non-whitespace character
+[^\s]
+\w
+A word character (alphanumeric and underscore)
+[a-zA-Z_0-9]
+\W
+A non-word character
+[^\w]
+
+
+// i, g ==> flags
+
+// i ==> case insensitive
+
+// let pattern = /hello/i
+
+// console.log(pattern.test("Hello world"))
+// console.log(pattern.test("hello world"))
+// console.log(pattern.test("hello world"))
+
+// let pattern = /Hello/
+// console.log("Hello World".match(pattern))
+
+// g = global
+// let pattern = /Hello/g
+// console.log("HelloWorld Hello HelloHello"
+//     .match(pattern).length)
+
+// let pattern = /[aeiou]/g
+// let str = "hello world"
+// console.log(str.match(pattern))
+
+
+// let pattern = /[a-z]/ig
+// let pattern = /[a-zA-Z]/g
+// let pattern = /[0-9]/g
+// console.log("Hello1245".match(pattern))
+
+// "hello"
+
+
+
+// Write a R.E to check whether a mobile
+// no is valid or not
+
+// 10 digits ==> 6 to 9....0 to 9
+
+// /[6789]/ vs /6789/ vs [6-9]
+// [0-9] ==> \d
+// [^0-9]
+// [a-z] ==> 
+// [A-Z] ==>
+// let pattern = /[6-9]\d{9}/
+// console.log(pattern.test("9113239065"))
+
+
+// /\S/g vs /[^\s]/g
+
+let pattern = /\S/g
+console.log("911\t323f dsa\ndfsda".match(pattern))
+
+
+
+
+
+
+
+
+
