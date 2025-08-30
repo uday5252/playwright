@@ -1,0 +1,23 @@
+// Example input
+let text = "Please please help me me quickly Quickly";
+
+// Split the text into words
+let words = text.split(" ");
+
+// Prepare data structures
+let result = [];
+let seen = new Set();
+
+// Loop through words and check consecutive duplicates
+for (let i = 0; i < words.length - 1; i++) {
+    if (words[i].toLowerCase() === words[i + 1].toLowerCase()) {
+        let wordLower = words[i].toLowerCase();
+        if (!seen.has(wordLower)) {
+            seen.add(wordLower);
+            result.push(words[i]); // Preserve original case
+        }
+    }
+}
+
+// Print the result
+console.log(result.join(" "));
