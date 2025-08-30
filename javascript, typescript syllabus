@@ -1,0 +1,88 @@
+• Introduction to JavaScript
+o Introduction to JavaScript
+o Features of JavaScript
+o Evolution of JavaScript
+o Developing software in JavaScript
+• Setting up JavaScript Development Environment
+o Installing Node.js
+o Choosing and Setting up an IDE (Visual Studio Code, Sublime Text)
+o Introduction to NPM (Node Package Manager)
+o Using the Terminal/Command Line for JavaScript development
+• JavaScript Language Fundamentals
+o Keywords and Reserved Words
+o Data Types in JavaScript (Primitive & Non-Primitive)
+o Variables (let, const, var)
+o Operators and Assignments
+o Flow Control: if, switch, loops
+o Functions and Arrow Functions
+o Best Practices in Language Fundamentals
+• Objects and Arrays
+o Introduction to Objects
+o Creating and Using Objects
+o Arrays and Array Methods
+o Iterating Over Arrays (for, forEach, map, filter)
+o Object-Oriented Concepts in JavaScript (Prototypes, Inheritance)
+o Best Practices for Objects and Arrays
+• JavaScript Functions and Scope
+o Function Declarations and Expressions
+o Parameters and Arguments
+o Understanding Scope (Global, Local, Lexical Scope)
+o Closures and their Uses
+o The 'this' Keyword
+o Best Practices for Functions and Scope
+• Asynchronous JavaScript
+o Understanding Callbacks
+
+6
+o Promises and Promise Chaining
+o Async/Await
+o Error Handling in Asynchronous Code
+o Event Loop and Non-blocking I/O
+o Best Practices in Asynchronous Programming
+• Error Handling in JavaScript
+o Introduction to Error Handling
+o try-catch-finally
+o Throwing Errors
+o Custom Errors
+o Best Practices for Error Handling
+• JavaScript Classes and Inheritance
+o Introduction to Classes
+o Constructors and Methods
+o Inheritance and the 'extends' keyword
+o Superclass and Subclass
+o Getters and Setters
+o Best Practices in Classes and Inheritance
+• Regular Expressions in JavaScript
+o Introduction to Regular Expressions
+o Basic Regular Expression Syntax
+o Using RegExp Objects
+o Validating Data with Regular Expressions
+o Best Practices for Regular Expressions
+• JavaScript for Testing Automation
+o Introduction to Testing Frameworks (Mocha, Jest, Jasmine)
+o Setting up and Running Tests with Mocha
+o Writing Unit Tests in JavaScript
+o Testing Asynchronous Code
+o Mocking and Stubbing
+o Best Practices for Testing
+• ES6 & Typescript
+o Var, Let and Const keyword
+o Arrow functions, default arguments
+o Template Strings, String methods
+o Object de-structuring
+o Spread and Rest operator
+o Typescript Fundamentals
+o Types & type assertions, Creating custom object types, function types
+o Typescript OOPS - Classes, Interfaces, Constructor, etc
+o Asynchronous Programming in ES6
+o Promise Constructor
+o Promise with Chain
+o Promise Race
+• Node js
+o Introduction to Node js
+o Installation of Node js
+o Basics of Node js
+o First Application of node js
+o Node js NPM
+o Node js module
+o Node js Assertion module
