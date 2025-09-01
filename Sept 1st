@@ -32,7 +32,35 @@ student3.displayDetails()
 student4.displayDetails()
 
 
+class Car
+{
+    static count = 0
 
+    constructor()
+    {
+        Car.count++
+    }
+
+    static getCount()
+    {
+        console.log(Car.count)
+    }
+}
+
+let k = 3
+let parkingArr = [1, 4, 2]
+
+for(let i = 0; i < k ; i++)
+{
+    for(let j = 0; j < parkingArr[i]; j++)
+    {
+        // i = 1 ==> second parking area
+        // j = 0 ==> 3 < 4
+        new Car()
+        // j = 1 ==> terminate 
+    }
+    Car.getCount()
+}
 
 
 
