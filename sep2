@@ -1,3 +1,77 @@
+
+// Rest Operator(...) and Spread Operator(...)
+
+// ... ==> Rest Operator ==> It is a operator
+// that is basically used to collect multiple elements
+// and store it in array format
+
+// 
+// ... ==> Spread Operator ==> It is a operator
+// that is basically take the array / object elements
+// and split those array elements individually
+
+// function collect(...a)
+// {
+//     console.log(a)
+// }
+
+// collect(10, 20, 30)
+
+// const arr1 = [ 10, 20, 30 ]
+// const arr2 = [ 40, 50, 60 ]
+// const arr3 = [ 70, 80, 90 ]
+
+// const arr4 =  [ ...arr1, ...arr2, ...arr3 ]
+// console.log(arr4)
+
+
+// const obj1 = { name1: "Raju", age1: 20 }
+// const obj2 = { name2: "Mary", age2: 25 }
+
+// const obj3 = { ...obj1, ...obj2  }
+// console.log(obj3)
+
+
+// Array Destructuring ==> Extarcting the element
+// from teh array
+
+// const data = [ "Red", "Orange", "Cat", "Rat", "Mary" ]
+
+// const [ color1, color2, animal1, animal2, human1 ] = data
+
+// const [ ...color, animal1, animal2, human1 ] = data
+
+
+
+// const data = [ "Cat", "Rat", "Mary", "Red", "Orange" ]
+
+// // const [ color1, color2, animal1, animal2, human1 ] = data
+
+// const [ animal1, animal2, human1, ...color ] = data
+
+// console.log(color)
+
+
+
+
+// Object destruuting ==> extract the values from
+// the object
+
+// const obj1 = { name1: "Raju", age1: 20 }
+
+// const {name1, age1}  = obj1
+// console.log(name1, age1)
+// name1 = "Raju"
+// age1 = 20
+
+
+
+// const inputData = "3\nLight\nFan\nLight"
+
+// const inputArr = inputData.split("\n")
+// const [ inputCount, ...deviceNames ] = inputArr
+
+
 // Print the name of the person who has got highest total marks
 
 const data = [
