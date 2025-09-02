@@ -14,3 +14,36 @@ The system should let you calculate fares for different rides polymorphically.
 
 Write a TypeScript program using classes, inheritance, and polymorphism to solve this problem.
 Then test it with distances.
+
+abstract class Ride
+{
+    abstract calculateFare(distance : number) : number
+    
+    // rideType = c or b
+    rideFare(rideType : Ride, distance : number ) : number
+    {
+        return rideType.calculateFare(distance)
+    }
+}
+
+
+class CarRide extends Ride
+{
+    calculateFare(distance: number): number {
+        return distance * 20;
+    }
+}
+
+class BikeRide extends Ride
+{
+    calculateFare(distance: number): number {
+        return distance * 10;
+    }
+}
+
+
+const c : CarRide = new CarRide()
+const b : BikeRide = new BikeRide()
+
+console.log(c.rideFare(c, 10))
+console.log(b.rideFare(b, 19))
