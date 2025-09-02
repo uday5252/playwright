@@ -1,0 +1,22 @@
+// Print the name of the person who has got highest total marks
+
+const data = [
+    {
+        username: "Raju",
+        age: 13,
+        marks: [ 40, 56, 89, 23 ]
+    },
+    {
+        username: "Mary",
+        age: 13,
+        marks: [ 60, 88, 90, 99 ]
+    },
+    {
+        username: "John",
+        age: 13,
+        marks: [ 100, 99, 100, 100 ]
+    }
+]
+
+// { name: totalMarks}
+// { John: 399 }
