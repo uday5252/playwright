@@ -94,3 +94,50 @@ const data = [
 
 // { name: totalMarks}
 // { John: 399 }
+
+
+
+// // Print the name of the person who has got highest total marks
+
+const data = [
+    {
+        username: "Raju",
+        age: 13,
+        marks: [ 40, 56, 89, 23 ]
+    },
+    {
+        username: "Mary",
+        age: 13,
+        marks: [ 60, 88, 90, 99 ]
+    },
+    {
+        username: "John",
+        age: 13,
+        marks: [ 100, 99, 100, 100 ]
+    }
+]
+
+const resultObj = { username: "", totalMarks: 0 }
+
+data.forEach(function(info)
+{
+    // info = { username: "Raju", age: 13, marks: [ 40, 56, 89, 23 ]}
+   const { username, marks } = info
+   
+   const marksSum = marks.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue
+   })
+//    299, 328, 399
+   if(marksSum >  resultObj.totalMarks)
+   {
+        resultObj.username = username
+        resultObj.totalMarks = marksSum
+   }
+
+})
+
+console.log(
+    {
+        [resultObj.username]: resultObj.totalMarks 
+    }
+)
