@@ -1,0 +1,16 @@
+Scenario: Ride Booking System (like Ola/Uber)
+
+You are building a small ride-booking system.
+
+Every ride has a method calculateFare(distance: number): number.
+
+CarRide costs ₹20 per km.
+
+BikeRide costs ₹10 per km.
+
+The system should let you calculate fares for different rides polymorphically.
+
+✅ Question
+
+Write a TypeScript program using classes, inheritance, and polymorphism to solve this problem.
+Then test it with distances.
