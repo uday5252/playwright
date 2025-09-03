@@ -1,1 +1,42 @@
 
+Scenario: Movie Ticket Booking System
+Problem Statement
+
+You are building a system for booking movie tickets in a multiplex.
+
+Input Format
+First line → number of bookings (n)  
+Next n lines → BookingType MovieName Seats ExtraProperty
+
+
+BookingType can be "Regular" or "Premium".
+
+Seats is an integer.
+
+For Regular, ExtraProperty = snacks (Yes or No).
+
+For Premium, ExtraProperty = loungeAccess (Yes or No).
+
+Constraints
+
+1 <= n <= 100
+
+Seats > 0
+
+MovieName.length <= 50
+Output Format
+
+For each booking, print booking details in the format:
+
+Booking: MovieName - Seats seats - [ExtraDetails]
+
+Example Input
+3
+Regular Inception 2 Yes
+Premium Interstellar 3 Yes
+Regular Avatar 4 No
+
+Example Output
+Booking: Inception - 2 seats - Snacks Included
+Booking: Interstellar - 3 seats - Lounge Access
+Booking: Avatar - 4 seats - No Snacks
