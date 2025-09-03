@@ -1,0 +1,73 @@
+
+
+### Problem Statement
+
+You are building a system for an online food delivery app.
+Customers can order different types of food items.
+
+There are **two types of food items**:
+
+1. **FastFood**
+
+   * Has a food name, base price.
+   * If marked as "Combo", add ₹50 extra to the price.
+
+2. **HealthyFood**
+
+   * Has a food name, base price.
+   * If marked as "Organic", add ₹30 extra to the price.
+
+When displaying the order, the system should show the item details and the final price.
+
+---
+
+### Input Format
+
+```
+First line → number of items (n)  
+Next n lines → FoodType FoodName Price ExtraProperty
+```
+
+* `FoodType` = "FastFood" or "HealthyFood"
+* `FoodName` = string (no spaces)
+* `Price` = integer
+* `ExtraProperty` = "Combo"/"Normal" (for FastFood), "Organic"/"Normal" (for HealthyFood)
+
+---
+
+### Constraints
+
+* `1 <= n <= 100`
+* `Price > 0`
+* `FoodName.length <= 50`
+
+---
+
+### Output Format
+
+For each item, print:
+
+```
+Item: FoodName - Final Price: ₹amount
+```
+
+---
+
+### Example Input
+
+```
+3
+FastFood Burger 120 Combo
+HealthyFood Salad 200 Organic
+FastFood Pizza 300 Normal
+```
+
+### Example Output
+
+```
+Item: Burger - Final Price: ₹170
+Item: Salad - Final Price: ₹230
+Item: Pizza - Final Price: ₹300
+```
+
+--
