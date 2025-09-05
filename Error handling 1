@@ -1,0 +1,86 @@
+
+```ts
+function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error("Division by zero is not allowed");
+  }
+  return a / b;
+}
+
+try {
+  const result = divide(10, 0);
+  console.log("Result:", result);
+} catch (error) {
+  console.error("Error message:", (error as Error).message);
+} finally {
+  console.log("Operation complete");
+}
+```
+
+---
+
+## 🔹 Step-by-Step Flow (Simple Words)
+
+### Case 1: When `b = 0`
+
+1. `divide(10, 0)` is called.
+2. Inside the function:
+
+   * It checks `if (b === 0)`. Yes, it is true.
+   * So it **throws an error** → `"Division by zero is not allowed"`.
+3. Because an error was thrown:
+
+   * The line `console.log("Result:", result);` is **skipped**.
+   * The program jumps to the **catch** block.
+4. The `catch` block prints:
+
+   ```
+   Error message: Division by zero is not allowed
+   ```
+5. The `finally` block **always runs**, so it prints:
+
+   ```
+   Operation complete
+   ```
+
+👉 **Output**:
+
+```
+Error message: Division by zero is not allowed
+Operation complete
+```
+
+---
+
+### Case 2: When `b ≠ 0`
+
+```ts
+const result = divide(10, 2);
+```
+
+1. `divide(10, 2)` is called.
+2. Inside the function:
+
+   * `b === 0`? ❌ No.
+   * So it returns `10 / 2 = 5`.
+3. The line `console.log("Result:", result);` runs:
+
+   ```
+   Result: 5
+   ```
+4. No error happened → `catch` block is skipped.
+5. `finally` still runs:
+
+   ```
+   Operation complete
+   ```
+
+👉 **Output**:
+
+```
+Result: 5
+Operation complete
+```
+
+---
+
