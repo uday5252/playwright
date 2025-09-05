@@ -1,0 +1,78 @@
+
+```ts
+// Step 1: Create a custom error class
+class LicenseError extends Error {
+  constructor(message: string) {
+    super(message); // call parent Error class
+    this.name = "LicenseError"; // custom name
+  }
+}
+
+// Step 2: Function to apply for license
+function applyForLicense(age: number) {
+  if (age < 18) {
+    throw new LicenseError("You must be at least 18 years old to get a license.");
+  }
+  return "✅ License granted!";
+}
+
+// Step 3: Use try-catch to handle
+try {
+  const result = applyForLicense(16); // test with age = 16
+  console.log(result);
+} catch (error) {
+    console.error("License Error:", error.message);
+  }
+  }
+} finally {
+  console.log("Application process complete.");
+}
+```
+
+---
+
+## 🔹 Flow (Easy Words)
+
+1. Call `applyForLicense(16)`.
+2. Inside function:
+
+   * Age = 16 → less than 18.
+   * It **throws LicenseError** → `"You must be at least 18 years old..."`.
+3. Program jumps to **catch**:
+
+   * Prints:
+
+     ```
+     License Error: You must be at least 18 years old to get a license.
+     ```
+4. **finally** runs:
+
+   ```
+   Application process complete.
+   ```
+
+👉 **Output**:
+
+```
+License Error: You must be at least 18 years old to get a license.
+Application process complete.
+```
+
+---
+
+### ✅ Case when age = 20
+
+```ts
+const result = applyForLicense(20);
+console.log(result);
+```
+
+Output:
+
+```
+✅ License granted!
+Application process complete.
+```
+
+---
+
