@@ -112,27 +112,27 @@ Real-Time Example (WhatsApp):
 ---
 
 
-# **1. Functional vs Non-Functional Requirements**
+ 1. Functional vs Non-Functional Requirements
 
-### **A. Functional Requirements (FR)**
+ A. Functional Requirements (FR)
 
-* **Definition:** Describe **what the system should do** (features and behavior).
-* **Examples:**
+ Definition: Describe what the system should do (features and behavior).
+ Examples:
 
-  * WhatsApp: Send messages, voice notes, video calls.
-  * Banking App: Fund transfer, account balance check, bill payment.
+   WhatsApp: Send messages, voice notes, video calls.
+   Banking App: Fund transfer, account balance check, bill payment.
 
-**Real-Time Example:**
+Real-Time Example:
 
-* WhatsApp FR: “User can send a message to a contact.”
-* Banking FR: “User can transfer ₹1,00,000 per day via UPI.”
+ WhatsApp FR: “User can send a message to a contact.”
+ Banking FR: “User can transfer ₹1,00,000 per day via UPI.”
 
 ---
 
-### **B. Non-Functional Requirements (NFR)**
+ B. Non-Functional Requirements (NFR)
 
-* **Definition:** Describe **how the system should behave**, i.e., quality attributes.
-* **Focus:** Performance, reliability, usability, security, scalability.
+ Definition: Describe how the system should behave, i.e., quality attributes.
+ Focus: Performance, reliability, usability, security, scalability.
 
 | Category    | WhatsApp Example          | Banking App Example                |
 | ----------- | ------------------------- | ---------------------------------- |
@@ -144,136 +144,114 @@ Real-Time Example (WhatsApp):
 
 ---
 
-# **2. Stable vs Volatile Requirements**
+ 2. Stable vs Volatile Requirements
 
 | Type         | Definition                                                                       | Example                                                                             |
 | ------------ | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **Stable**   | Core features that **rarely change**                                             | WhatsApp: Sending messages; Banking App: Fund transfer, login                       |
-| **Volatile** | Features that **frequently change** due to trends, user feedback, or regulations | WhatsApp: Dark mode, emoji reactions; Banking App: UI redesign, new RBI regulations |
+| Stable   | Core features that rarely change                                             | WhatsApp: Sending messages; Banking App: Fund transfer, login                       |
+| Volatile | Features that frequently change due to trends, user feedback, or regulations | WhatsApp: Dark mode, emoji reactions; Banking App: UI redesign, new RBI regulations |
 
-**Key Point:**
+Key Point:
 
-* Stable → foundation of the app, must always work correctly.
-* Volatile → need flexible design to adapt quickly.
-
----
-
-
-
-# **4. Requirements Change**
-
-**Definition:**
-
-* Modifying or adding requirements **during the software lifecycle**.
-
-**Reasons:**
-
-* New stakeholder needs
-* Regulatory changes
-* Technology upgrades
-* Bug fixes or performance issues
-
-**Example:**
-
-* Banking App initially supports only UPI. Later, a **requirement change** adds **credit card payments**.
-
----
-Sure! Let’s focus **entirely on Requirement Creep** and explain it clearly with examples.
+ Stable → foundation of the app, must always work correctly.
+ Volatile → need flexible design to adapt quickly.
 
 ---
 
-# **1. What is Requirement Creep?**
 
-**Definition:**
 
-* Requirement Creep, also called **Scope Creep**, is the **continuous or uncontrolled addition of new requirements** to a project **after the baseline has been set**, without following formal change management.
+ 4. Requirements Change
 
-**Key Point:**
+Definition:
 
-* It **happens gradually** and often goes unnoticed until it impacts **schedule, cost, or quality**.
+ Modifying or adding requirements during the software lifecycle.
+
+Reasons:
+
+ New stakeholder needs
+ Regulatory changes
+ Technology upgrades
+ Bug fixes or performance issues
+
+Example:
+
+ Banking App initially supports only UPI. Later, a requirement change adds credit card payments.
+
+
+ 1. What is Requirement Creep?
+
+Definition:
+
+ Requirement Creep, also called Scope Creep, is the continuous or uncontrolled addition of new requirements to a project after the baseline has been set, without following formal change management.
+
+Key Point:
+
+ It happens gradually and often goes unnoticed until it impacts schedule, cost, or quality.
 
 ---
 
-# **2. Why Requirement Creep Happens**
+ 2. Why Requirement Creep Happens
 
-1. **Unclear initial requirements**
+1. Unclear initial requirements
 
-   * Stakeholders are unsure what they want → keep adding new ideas.
+    Stakeholders are unsure what they want → keep adding new ideas.
 
-2. **Changing market or business needs**
+2. Changing market or business needs
 
-   * Business wants to stay competitive → new features requested mid-project.
+    Business wants to stay competitive → new features requested mid-project.
 
-3. **Poor change management process**
+3. Poor change management process
 
-   * Changes are accepted without formal approval or impact analysis.
+    Changes are accepted without formal approval or impact analysis.
 
-4. **Stakeholder pressure**
+4. Stakeholder pressure
 
-   * Managers or clients ask for extra features without updating project scope.
+    Managers or clients ask for extra features without updating project scope.
 
 ---
 
-# **3. Impact of Requirement Creep**
+ 3. Impact of Requirement Creep
 
 | Impact               | Example                                                                                                                           |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Project Delays**   | Banking App initially planned for fund transfer only → adding mini statements and bill payments mid-development → release delayed |
-| **Increased Cost**   | Extra development and testing resources required                                                                                  |
-| **Quality Issues**   | Rushed implementation → more bugs or failures                                                                                     |
-| **Team Frustration** | Developers and testers overwhelmed by changing scope                                                                              |
-| **Missed Deadlines** | Original milestones no longer achievable                                                                                          |
+| Project Delays   | Banking App initially planned for fund transfer only → adding mini statements and bill payments mid-development → release delayed |
+| Increased Cost   | Extra development and testing resources required                                                                                  |
+| Quality Issues   | Rushed implementation → more bugs or failures                                                                                     |
+| Team Frustration | Developers and testers overwhelmed by changing scope                                                                              |
+| Missed Deadlines | Original milestones no longer achievable                                                                                          |
 
 ---
 
-# **4. Real-Time Example**
+ 4. Real-Time Example
 
-**WhatsApp Example:**
+WhatsApp Example:
 
-* Original plan: Version 2.0 → Send messages + voice calls
-* During development: Stakeholders request
+ Original plan: Version 2.0 → Send messages + voice calls
+ During development: Stakeholders request
 
-  * Status updates
-  * Emoji reactions
-  * Dark mode
-  * Video calls
-* Without proper change management → project delayed, testing extended, release pushed back
+   Status updates
+   Emoji reactions
+   Dark mode
+   Video calls
+ Without proper change management → project delayed, testing extended, release pushed back
 
-**Banking App Example:**
+Banking App Example:
 
-* Original plan: Mobile fund transfer
-* During development: Stakeholders request
+ Original plan: Mobile fund transfer
+ During development: Stakeholders request
 
-  * Mini statements
-  * Bill payments
-  * QR code payments
-  * Push notifications
-* If added without formal process → cost overruns and schedule slips
-
----
-
-# **5. How to Prevent Requirement Creep**
-
-1. **Baselining Requirements** – Freeze approved requirements; only formal changes allowed.
-2. **Change Management Process** – Evaluate every new request before approval.
-3. **Requirement Traceability Matrix (RTM)** – Track each requirement, linked to design and test cases.
-4. **Clear Communication** – Keep stakeholders informed about impacts of adding new requirements.
-5. **Prioritization** – Use MoSCoW method (Must have, Should have, Could have, Won’t have) to filter new requests.
+   Mini statements
+   Bill payments
+   QR code payments
+   Push notifications
+ If added without formal process → cost overruns and schedule slips
 
 ---
 
-# **6. Summary**
+ 5. How to Prevent Requirement Creep
 
-```
-Requirement Creep = uncontrolled addition of new requirements after baseline
-Causes → unclear requirements, changing business needs, poor change management, stakeholder pressure
-Impacts → delays, higher cost, lower quality, missed deadlines
-Prevention → Baselining, Change Management, RTM, Prioritization, Communication
-```
-
----
-
-If you want, I can **draw a simple diagram** showing **Requirement Creep causes, impacts, and prevention** using **WhatsApp & Banking App examples** — this makes it **super easy to visualize**.
-
-Do you want me to make that diagram?
+1. Baselining Requirements – Freeze approved requirements; only formal changes allowed.
+2. Change Management Process – Evaluate every new request before approval.
+3. Requirement Traceability Matrix (RTM) – Track each requirement, linked to design and test cases.
+4. Clear Communication – Keep stakeholders informed about impacts of adding new requirements.
 
