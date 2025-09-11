@@ -1,113 +1,113 @@
 
-# **1. Evolution of Requirements**
+ 1. Evolution of Requirements
 
-**Definition:** Requirements are **what the software should do**, and they often **evolve over time** due to business changes, user feedback, or technical constraints.
+Definition: Requirements are what the software should do, and they often evolve over time due to business changes, user feedback, or technical constraints.
 
-**Stages of Evolution:**
+Stages of Evolution:
 
 | Stage                 | Explanation                                           | Example                                                              |
 | --------------------- | ----------------------------------------------------- | -------------------------------------------------------------------- |
-| **Elicitation**       | Gathering requirements from stakeholders              | Bank wants “mobile fund transfer.”                                   |
-| **Analysis**          | Understand, prioritize, and check feasibility         | Decide which payment modes to support first: UPI, card, net banking. |
-| **Specification**     | Document requirements formally (SRS)                  | “Fund transfer limit = ₹1,00,000/day.”                               |
-| **Validation**        | Ensure requirements are complete, clear, and testable | Testable: “App must send OTP within 5 seconds.”                      |
-| **Change Management** | Update requirements due to feedback or changes        | RBI changes rules → app needs updated interest calculation.          |
+| Elicitation       | Gathering requirements from stakeholders              | Bank wants “mobile fund transfer.”                                   |
+| Analysis          | Understand, prioritize, and check feasibility         | Decide which payment modes to support first: UPI, card, net banking. |
+| Specification     | Document requirements formally (SRS)                  | “Fund transfer limit = ₹1,00,000/day.”                               |
+| Validation        | Ensure requirements are complete, clear, and testable | Testable: “App must send OTP within 5 seconds.”                      |
+| Change Management | Update requirements due to feedback or changes        | RBI changes rules → app needs updated interest calculation.          |
 
-**Real-Time Example:**
+Real-Time Example:
 
-* WhatsApp originally allowed **text messaging** only.
-* Later, requirements evolved → **voice messages, video calls, group calls, status feature** were added.
+ WhatsApp originally allowed text messaging only.
+ Later, requirements evolved → voice messages, video calls, group calls, status feature were added.
 
 ---
 
-# **2. Who Provides the Requirements?**
+ 2. Who Provides the Requirements?
 
-Requirements come from multiple **stakeholders**:
+Requirements come from multiple stakeholders:
 
 | Stakeholder                     | Example / Role                                                              |
 | ------------------------------- | --------------------------------------------------------------------------- |
-| **Business / Client**           | Defines what software should achieve. Example: Bank wants QR code payments. |
-| **End Users**                   | Provide usability needs. Example: Users want **dark mode** in WhatsApp.     |
-**Regulatory Bodies**           | Legal / compliance requirements. Example: RBI rules for fund transfers.     |
+| Business / Client           | Defines what software should achieve. Example: Bank wants QR code payments. |
+| End Users                   | Provide usability needs. Example: Users want dark mode in WhatsApp.     |
+| Regulatory Bodies           | Legal / compliance requirements. Example: RBI rules for fund transfers.     |
 
 ---
 
-# **3. Challenges in Requirement Gathering**
+ 3. Challenges in Requirement Gathering
 
-1. **Unclear Requirements** – Stakeholders don’t know exactly what they want.
+1. Unclear Requirements – Stakeholders don’t know exactly what they want.
 
-   * Example: “Make login secure” → too vague.
+    Example: “Make login secure” → too vague.
 
-2. **Changing Requirements** – Mid-project changes.
+2. Changing Requirements – Mid-project changes.
 
-   * Example: Add UPI payments after initial release.
+    Example: Add UPI payments after initial release.
 
-3. **Communication Gaps** – Developers misunderstand business needs.
+3. Communication Gaps – Developers misunderstand business needs.
 
-   * Example: Bank wants 2FA → dev implements only password.
+    Example: Bank wants 2FA → dev implements only password.
 
-4. **Conflicting Requirements** – Different stakeholders want opposite things.
+4. Conflicting Requirements – Different stakeholders want opposite things.
 
-   * Example: Users want quick login, security team wants multiple verifications.
+    Example: Users want quick login, security team wants multiple verifications.
 
-5. **Incomplete Requirements** – Missing details.
+5. Incomplete Requirements – Missing details.
 
-   * Example: SRS doesn’t specify daily transfer limit.
+    Example: SRS doesn’t specify daily transfer limit.
 
-6. **Technical Feasibility** – Some ideas may be impossible to implement.
+6. Technical Feasibility – Some ideas may be impossible to implement.
 
-   * Example: Real-time fraud detection may need extra servers and resources.
-
----
-
-# **4. Why Do We Need Good Requirements?**
-
-**Good requirements are essential because:**
-
-1. Provide **clear direction** → developers know exactly what to build.
-
-   * Example: “Send OTP within 5 seconds” is clear.
-
-2. **Reduce costs** → prevent expensive fixes later.
-
-   * Example: Fixing fund transfer bug after release is costly.
-
-3. **Better planning** → estimate resources and time accurately.
-
-4. **Enable testing** → testers can design test cases from clear requirements.
-
+    Example: Real-time fraud detection may need extra servers and resources.
 
 ---
 
-# **5. Characteristics of Good Requirements**
+ 4. Why Do We Need Good Requirements?
+
+Good requirements are essential because:
+
+1. Provide clear direction → developers know exactly what to build.
+
+    Example: “Send OTP within 5 seconds” is clear.
+
+2. Reduce costs → prevent expensive fixes later.
+
+    Example: Fixing fund transfer bug after release is costly.
+
+3. Better planning → estimate resources and time accurately.
+
+4. Enable testing → testers can design test cases from clear requirements.
+
+
+---
+
+ 5. Characteristics of Good Requirements
 
 | Characteristic            | Meaning                    | Example                                              |
 | ------------------------- | -------------------------- | ---------------------------------------------------- |
-| **Correct**               | Matches stakeholder needs  | OTP must reach in 5 sec                              |
-| **Unambiguous**           | Only one interpretation    | Daily fund transfer limit = ₹1,00,000                |
-| **Complete**              | Covers all functionality   | Login, 2FA, fund transfer, notifications             |
-| **Consistent**            | No conflicts               | Security and usability requirements don’t contradict |
-| **Verifiable / Testable** | Can be tested              | “App must allow 10 simultaneous group calls”         |
-| **Traceable**             | Can track to source        | Requirement linked to business goal                  |
-| **Understandable**        | Clear for all stakeholders | Written in simple language                           |
+| Correct               | Matches stakeholder needs  | OTP must reach in 5 sec                              |
+| Unambiguous           | Only one interpretation    | Daily fund transfer limit = ₹1,00,000                |
+| Complete              | Covers all functionality   | Login, 2FA, fund transfer, notifications             |
+| Consistent            | No conflicts               | Security and usability requirements don’t contradict |
+| Verifiable / Testable | Can be tested              | “App must allow 10 simultaneous group calls”         |
+| Traceable             | Can track to source        | Requirement linked to business goal                  |
+| Understandable        | Clear for all stakeholders | Written in simple language                           |
 
 ---
 
-# **6. Impact of Bad Requirements**
+ 6. Impact of Bad Requirements
 
 | Problem                 | Impact / Example                                                                                      |
 | ----------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Vague / Ambiguous**   | Wrong implementation. Example: “Make voice notes better” → different developers interpret differently |
-| **Incomplete**          | Missing functionality → user complaints                                                               |
-| **Conflicting**         | Delays, disagreements between teams                                                                   |
-| **Unrealistic**         | Deadlines missed, frustrated devs                                                                     |
-| **Unverifiable**        | Testers cannot validate → defects go unnoticed                                                        |
-| **Constantly Changing** | Scope creep, increased cost                                                                           |
+| Vague / Ambiguous   | Wrong implementation. Example: “Make voice notes better” → different developers interpret differently |
+| Incomplete          | Missing functionality → user complaints                                                               |
+| Conflicting         | Delays, disagreements between teams                                                                   |
+| Unrealistic         | Deadlines missed, frustrated devs                                                                     |
+| Unverifiable        | Testers cannot validate → defects go unnoticed                                                        |
+| Constantly Changing | Scope creep, increased cost                                                                           |
 
-**Real-Time Example (WhatsApp):**
+Real-Time Example (WhatsApp):
 
-* Requirement: “Improve media sharing.”
-* Bad requirement → unclear which media (images, videos, docs?), no size limits → developers may implement only images → user complaints.
+ Requirement: “Improve media sharing.”
+ Bad requirement → unclear which media (images, videos, docs?), no size limits → developers may implement only images → user complaints.
 
 ---
 
