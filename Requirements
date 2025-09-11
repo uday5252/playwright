@@ -111,3 +111,71 @@ Real-Time Example (WhatsApp):
 
 ---
 
+
+# **1. Functional vs Non-Functional Requirements**
+
+### **A. Functional Requirements (FR)**
+
+* **Definition:** Describe **what the system should do** (features and behavior).
+* **Examples:**
+
+  * WhatsApp: Send messages, voice notes, video calls.
+  * Banking App: Fund transfer, account balance check, bill payment.
+
+**Real-Time Example:**
+
+* WhatsApp FR: “User can send a message to a contact.”
+* Banking FR: “User can transfer ₹1,00,000 per day via UPI.”
+
+---
+
+### **B. Non-Functional Requirements (NFR)**
+
+* **Definition:** Describe **how the system should behave**, i.e., quality attributes.
+* **Focus:** Performance, reliability, usability, security, scalability.
+
+| Category    | WhatsApp Example          | Banking App Example                |
+| ----------- | ------------------------- | ---------------------------------- |
+| Performance | Messages delivered in <2s | Fund transfer processed <5s        |
+| Security    | End-to-end encryption     | OTP & 2FA for login & transactions |
+| Usability   | Simple UI                 | Easy navigation for fund transfer  |
+| Reliability | 99.9% uptime              | App available 24/7                 |
+| Scalability | Millions of users         | Handle peak loads on salary day    |
+
+---
+
+# **2. Stable vs Volatile Requirements**
+
+| Type         | Definition                                                                       | Example                                                                             |
+| ------------ | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Stable**   | Core features that **rarely change**                                             | WhatsApp: Sending messages; Banking App: Fund transfer, login                       |
+| **Volatile** | Features that **frequently change** due to trends, user feedback, or regulations | WhatsApp: Dark mode, emoji reactions; Banking App: UI redesign, new RBI regulations |
+
+**Key Point:**
+
+* Stable → foundation of the app, must always work correctly.
+* Volatile → need flexible design to adapt quickly.
+
+---
+
+
+
+# **4. Requirements Change**
+
+**Definition:**
+
+* Modifying or adding requirements **during the software lifecycle**.
+
+**Reasons:**
+
+* New stakeholder needs
+* Regulatory changes
+* Technology upgrades
+* Bug fixes or performance issues
+
+**Example:**
+
+* Banking App initially supports only UPI. Later, a **requirement change** adds **credit card payments**.
+
+---
+
