@@ -178,4 +178,102 @@ Real-Time Example (WhatsApp):
 * Banking App initially supports only UPI. Later, a **requirement change** adds **credit card payments**.
 
 ---
+Sure! Let’s focus **entirely on Requirement Creep** and explain it clearly with examples.
+
+---
+
+# **1. What is Requirement Creep?**
+
+**Definition:**
+
+* Requirement Creep, also called **Scope Creep**, is the **continuous or uncontrolled addition of new requirements** to a project **after the baseline has been set**, without following formal change management.
+
+**Key Point:**
+
+* It **happens gradually** and often goes unnoticed until it impacts **schedule, cost, or quality**.
+
+---
+
+# **2. Why Requirement Creep Happens**
+
+1. **Unclear initial requirements**
+
+   * Stakeholders are unsure what they want → keep adding new ideas.
+
+2. **Changing market or business needs**
+
+   * Business wants to stay competitive → new features requested mid-project.
+
+3. **Poor change management process**
+
+   * Changes are accepted without formal approval or impact analysis.
+
+4. **Stakeholder pressure**
+
+   * Managers or clients ask for extra features without updating project scope.
+
+---
+
+# **3. Impact of Requirement Creep**
+
+| Impact               | Example                                                                                                                           |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Project Delays**   | Banking App initially planned for fund transfer only → adding mini statements and bill payments mid-development → release delayed |
+| **Increased Cost**   | Extra development and testing resources required                                                                                  |
+| **Quality Issues**   | Rushed implementation → more bugs or failures                                                                                     |
+| **Team Frustration** | Developers and testers overwhelmed by changing scope                                                                              |
+| **Missed Deadlines** | Original milestones no longer achievable                                                                                          |
+
+---
+
+# **4. Real-Time Example**
+
+**WhatsApp Example:**
+
+* Original plan: Version 2.0 → Send messages + voice calls
+* During development: Stakeholders request
+
+  * Status updates
+  * Emoji reactions
+  * Dark mode
+  * Video calls
+* Without proper change management → project delayed, testing extended, release pushed back
+
+**Banking App Example:**
+
+* Original plan: Mobile fund transfer
+* During development: Stakeholders request
+
+  * Mini statements
+  * Bill payments
+  * QR code payments
+  * Push notifications
+* If added without formal process → cost overruns and schedule slips
+
+---
+
+# **5. How to Prevent Requirement Creep**
+
+1. **Baselining Requirements** – Freeze approved requirements; only formal changes allowed.
+2. **Change Management Process** – Evaluate every new request before approval.
+3. **Requirement Traceability Matrix (RTM)** – Track each requirement, linked to design and test cases.
+4. **Clear Communication** – Keep stakeholders informed about impacts of adding new requirements.
+5. **Prioritization** – Use MoSCoW method (Must have, Should have, Could have, Won’t have) to filter new requests.
+
+---
+
+# **6. Summary**
+
+```
+Requirement Creep = uncontrolled addition of new requirements after baseline
+Causes → unclear requirements, changing business needs, poor change management, stakeholder pressure
+Impacts → delays, higher cost, lower quality, missed deadlines
+Prevention → Baselining, Change Management, RTM, Prioritization, Communication
+```
+
+---
+
+If you want, I can **draw a simple diagram** showing **Requirement Creep causes, impacts, and prevention** using **WhatsApp & Banking App examples** — this makes it **super easy to visualize**.
+
+Do you want me to make that diagram?
 
