@@ -246,12 +246,4 @@ Banking App Example:
    Push notifications
  If added without formal process → cost overruns and schedule slips
 
----
-
- 5. How to Prevent Requirement Creep
-
-1. Baselining Requirements – Freeze approved requirements; only formal changes allowed.
-2. Change Management Process – Evaluate every new request before approval.
-3. Requirement Traceability Matrix (RTM) – Track each requirement, linked to design and test cases.
-4. Clear Communication – Keep stakeholders informed about impacts of adding new requirements.
 
