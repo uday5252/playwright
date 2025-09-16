@@ -1,0 +1,50 @@
+1) locator(id)
+2) locator(class)
+NOTE: If multiple web elements are identifies using some
+locator, then playwright gets confused, so in order to solve this problem we use methods like first(), last() and nth(indexno)
+3) locator([attribute])
+attribute name
+< input type="text" name="username" ....... />
+tag name
+attribute
+attribute value
+4) locator(tagname[attribute])
+5) locator(tagname[attrname^ = 'attrvalue'])
+
+6) locator(tagname[attrname$ = 'attrvalue'])
+
+7) locator(tagname[attrname* = 'attrvalue'])
+* ==> contains
+
+
+// open the browser
+// naviagte to facebook
+// enter valid username
+// enter valid password
+// click on login button
+
+import { test } from "@playwright/test"
+
+test("verify login with valid data", async function({page})
+{
+    await page.goto("https://www.facebook.com")
+
+    await page.locator("input[data-testid*='roy']").nth(0).fill("Welcome@gmail.com")
+
+    // await page.locator("input[data-testid^='roy']").nth(0).fill("Welcome@gmail.com")
+
+    // await page.locator("input[data-testid='royal-email']").fill("Welcome@gmail.com")
+
+    // await page.locator("[data-testid='royal-email']").fill("Welcome@gmail.com")
+
+    // await page.locator(".inputtext").nth(0).fill("Welcome@gmail.com")
+    // await page.locator(".inputtext").nth(1).fill("Welcome")
+    // await page.locator(".inputtext").first().fill("Raju@gmail.com")
+
+    await page.waitForTimeout(3000)
+
+    // await page.locator("#email").fill("Raju@gmail.com")
+    // await page.locator("#pass").fill("Rani@1234")
+
+    // await page.waitForTimeout(5000)
+})
