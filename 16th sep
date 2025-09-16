@@ -48,3 +48,105 @@ test("verify login with valid data", async function({page})
 
     // await page.waitForTimeout(5000)
 })
+===================================================================================================================
+
+===================================================================================================================
+
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+===================================================================================================================
+
+
+// open the browser
+// naviagte to facebook
+// enter valid username
+// enter valid password
+// click on login button
+
+import { test } from "@playwright/test"
+
+test("verify login with valid data", async function({page})
+{
+    await page.goto("http://127.0.0.1:5500/index.html")
+
+    await page.locator('xpath=//div/input[1]').fill("Raju")
+    await page.locator("xpath=/html/body/div/input[2]").fill("Ramu")
+    await page.locator("xpath=/html/body/input[1]").fill("30")
+    await page.locator("xpath=/html/body/input[2]").fill("8972139718")
+
+    // await page.locator("button:has-text('Login')").click()
+
+    // await page.locator(".parent input").fill("Hello")
+    // await page.locator(".parent+input").fill("21")
+
+    await page.waitForTimeout(3000)
+
+
+
+
+
+    // await page.locator("a:has-text('Forgotten password?')").click()
+
+    // await page.locator("input[data-testid*='roy']").nth(0).fill("Welcome@gmail.com")
+
+    // await page.locator("input[data-testid^='roy']").nth(0).fill("Welcome@gmail.com")
+
+    // await page.locator("input[data-testid='royal-email']").fill("Welcome@gmail.com")
+
+    // await page.locator("[data-testid='royal-email']").fill("Welcome@gmail.com")
+
+    // await page.locator(".inputtext").nth(0).fill("Welcome@gmail.com")
+    // await page.locator(".inputtext").nth(1).fill("Welcome")
+    // await page.locator(".inputtext").first().fill("Raju@gmail.com")
+
+    await page.waitForTimeout(3000)
+
+    // await page.locator("#email").fill("Raju@gmail.com")
+    // await page.locator("#pass").fill("Rani@1234")
+
+    // await page.waitForTimeout(5000)
+})
+
+8) whenever we want to indentify any webelement
+that has some text
+Ex: link ==> text, button ==> text
+we can idenfity using has:text()
+
+locator(tagname:has:text("------"))
+await page.locator(".parent input") ==> descendant
+await page.locator(".parent > input") ==> direct child
+await page.locator(".parent + input") ==> sibblings
+Xpath
+text() = 'Login'
+contains(text(), 'Login')
+1) CSS selector has a very limities capacbilities in handling the webelements that has text in it.
+2) CSS dslector can be used to indenfiy web elements only from parent to child whereas xpath can work from parent to child and child to parent
+Xpath ==> Is a path taht is written by looking at the HTML tree structure.
+Enter the first name
+locator(.parent > input).nth(0) ==> CSS Selector
+html
+<div class="parent">
+        <input type="text" placeholder="Enter first name:">
+        <input type="text" placeholder="Enter second name:">
+    </div>
+    <input type="number" placeholder="Enter age:">
+    <input type="number" placeholder="Enter mobileno:"
+</div>
+head
+body
+Xpath
+div
+input[1]    input[2]
+age           mob
+html/body/div/input[0]
+input[1]    input[2]
+first             second
+Absolute Xpath ==> Are the xpaths tshat always start from root element(html)
+Relative Xpath ==> Are the xpaths written from the relative most element
