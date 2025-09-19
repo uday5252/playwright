@@ -12,3 +12,13 @@
     await page.selectOption("#searchDropdownBox", { index: 10 })
     await page.waitForTimeout(3000)
 
+ await page.goto("http://127.0.0.1:5500/first.html")
+    const myPopup = page.waitForEvent("popup")//pending
+    await page.locator("xpath=//a[text()='Click 1']").click()
+    // logic to check any new child tab comes in fture or not
+    const childWindow = await myPopup
+   
+    await childWindow.locator("xpath=//a[text()='Click 2']").click()
+
+    const readText = await childWindow.locator("xpath=//h1[text()='Welcome']").textContent()
+    console.log(readText)
