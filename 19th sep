@@ -1,0 +1,14 @@
+
+    await page.goto("https://www.makemytrip.com/")
+    await page.locator("xpath=//label[@for='fromCity']").click()
+    await page.locator("xpath=//input[@placeholder='From']").fill("pune")
+    await page.locator("xpath=//span[text()='Pune']").click()
+    await page.waitForTimeout(2000)
+
+    await page.goto("https://www.amazon.in/")
+
+    await page.selectOption("#searchDropdownBox", "search-alias=fashion")
+    await page.selectOption("#searchDropdownBox", { label: "Furniture" })
+    await page.selectOption("#searchDropdownBox", { index: 10 })
+    await page.waitForTimeout(3000)
+
