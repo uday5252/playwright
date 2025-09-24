@@ -1,0 +1,17 @@
+    const file = data.readFile("C:/Users/udayk/OneDrive/Desktop/logindata.xlsx")
+
+    const sheetName = file.SheetNames[0]
+
+    const sheet = file.Sheets[sheetName]
+
+    const jsonData = data.utils.sheet_to_json(sheet)
+
+    for(let i of jsonData)
+    {
+        test(`Verify with invalid login credentials for ${i.email} and ${i.password}`, async ({ page }) =>
+        {
+            await page.goto('https://www.facebook.com/');
+            await page.getByTestId('royal-email').fill(i.email);
+            await page.getByTestId('royal-pass').fill(i.password);
+        })
+    }
