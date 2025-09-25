@@ -1,0 +1,263 @@
+import { test, expect } from '@playwright/test';
+import { Login } from "../pages/Login.js"
+
+
+
+    test.beforeEach(async function({ page, baseURL })
+    {
+        await page.goto(baseURL)  
+    })
+
+test("Valid Login" , async ({ page, baseURL}) =>
+    {   
+         const logon = new Logon(page)
+            
+            await login.enterusername("udaykirantutor@gmail.com")
+            await login.enterpassword("Dobby@5252")
+            await login.clicklogin()
+
+            // verify the confirmation / validation / assertions
+            const outputText = await login.verifyHomePageTitle()
+            expect(outputText).toContain("Home")
+
+            await page.locator("img").nth(0).click()
+
+            await page.waitForTimeout(5000)
+    })
+
+// test("Invalid Login" , async ({ page, baseURL }) =>
+//     {
+//             const login = new Login(page)
+            
+//             await login.enterUsername("udaykirantutor@gmail.com")
+//             await login.enterPassword("Dobby@5252")
+//             await login.clickLogin()
+
+//             // verify the confirmation / validation / assertions
+//             const outputText = await login.verifyHomePageTitle()
+//             expect(outputText).toContain("Home")
+
+//             await page.locator("img").nth(0).click()
+
+//             await page.waitForTimeout(5000)
+//     })
+
+// test("Blank Login" , async ({ page, baseURL }) =>
+//     {
+//             const login = new Login(page)
+            
+//             await login.enterUsername("udaykirantutor@gmail.com")
+//             await login.enterPassword("Dobby@5252")
+//             await login.clickLogin()
+
+//             // verify the confirmation / validation / assertions
+//             const outputText = await login.verifyHomePageTitle()
+//             expect(outputText).toContain("Home")
+
+//             await page.locator("img").nth(0).click()
+
+//             await page.waitForTimeout(5000)
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+//     test("Valid Login" , async ({ page, baseURL }) =>
+//     {
+//             const login = new Login(page)
+            
+//             await login.enterUsername("udaykirantutor@gmail.com")
+//             await login.enterPassword("Dobby@5252")
+//             await login.clickLogin()
+
+//             // verify the confirmation / validation / assertions
+//             const outputText = await login.verifyHomePageTitle()
+//             expect(outputText).toContain("Home")
+
+//             await page.locator("img").nth(0).click()
+
+//             await page.waitForTimeout(5000)
+//     })
+
+//     // test("Invalid Login" , async ({ page, baseURL }) =>
+//     // {
+            
+
+//     //         const login = new Login(page)
+            
+//     //         await login.enterUsername("raju@gmail.com")
+//     //         await login.enterPassword("Dobby@5252")
+//     //         await login.clickLogin()
+//     // })
+
+// })
+
+// @ts-check
+// @ts-ignore
+import { defineConfig, devices } from '@playwright/test';
+
+/**
+ * Read environment variables from file.
+ * https://github.com/motdotla/dotenv
+ */
+// import dotenv from 'dotenv';
+// import path from 'path';
+// dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+/**
+ * @see https://playwright.dev/docs/test-configuration
+ */
+export default defineConfig({
+  testDir: './tests',
+  /* Run tests in files in parallel */
+  fullyParallel: false,
+  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  forbidOnly: !!process.env.CI,
+  /* Retry on CI only */
+  // retries: process.env.CI ? 2 : 0,
+  retries: 2,
+  /* Opt out of parallel tests on CI. */
+  // workers: process.env.CI ? 1 : undefined,
+  workers: 3,
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  reporter: 'html',
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  use: {
+    /* Base URL to use in actions like `await page.goto('/')`. */
+    baseURL: "https://github.com/login",
+
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    headless: false,
+    trace: 'on',
+    screenshot: 'only-on-failure',
+    video: "retain-on-failure"
+  },
+
+  /* Configure projects for major browsers */
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
+
+    /* Test against mobile viewports. */
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },
+
+    /* Test against branded browsers. */
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    // },
+    // {
+    //   name: 'Google Chrome',
+    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    // },
+  ],
+
+  /* Run your local dev server before starting the tests */
+  // webServer: {
+  //   command: 'npm run start',
+  //   url: 'http://localhost:3000',
+  //   reuseExistingServer: !process.env.CI,
+  // },
+});
+
+
+
+
+export class Login 
+{
+    constructor(page)
+    {
+        this.page = page
+        // this.username = "xpath=//input[@name='login']"
+        // this.username = this.page.getByRole("textbox", { name:  "Username or email address"})
+        this.username = this.page.getByLabel("Username or email address")
+        this.password = this.page.getByRole("textbox", { name:  "Password"})
+        // this.loginBtn = this.page.getByRole("button", { name: "Sign in" })
+        this.loginBtn = this.page.getByText("Sign in").nth(1)
+        this.homePageText = "xpath=//h2[text()='Home']"
+    }
+
+    async enterUsername(email)
+    {
+        // await this.page.locator(this.username).fill(email)
+        await this.username.fill(email)
+    }
+
+    async enterPassword(password)
+    {
+        // await this.page.locator(this.password).fill(password)
+        await this.password.fill(password)
+    }
+
+    async clickLogin()
+    {
+        // await this.page.locator(this.loginBtn).click()
+        await this.loginBtn.click()
+    }
+
+    async verifyHomePageTitle()
+    {
+        const recievedText = await this.page.locator(this.homePageText).textContent()        
+        return recievedText
+    }
+}
+
+
+
+pages
+ => Login.js, Dashboard.js, .....................
+utils
+ => ExcelUtility.js, CSVUtility.js, JSONUtility.js
+data
+ => Excel, CSV and JSON
+testcases
+ => spec.js
+config.js ==> URL
+locator(CSS selector / XPATH)
+1) getByRole()
+buttons ==> role ==> button
+links ==> role ==> link
+2) getByText()
+getByText("Sign in)
+3) getByLabel()
+getByLable(labelname)
+4) getByPlaceholder()
+getByPlaceholder(placeholdertext)
+5) getByAltText()
+Example: <img src="img_girl.jpg" alt="Girl in a jacket">  const img = page.getByAltText('Girl in a jacket');  await expect(img).toBeVisible();
+6) getByTestId()
+ to locate an element based on its data-testid attribute (other attributes can be configured).
+7) getByTitle()
+<button title="Save your work">Save</button><img src="profile.png" title="User Profile" /><a href="/logout" title="Sign out">Logout</a>
+// Click button by title
+  await page.getByTitle('Save your work').click();
+
