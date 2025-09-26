@@ -1,0 +1,22 @@
+test("Mock response", async function({page})
+{
+    await page.route("**/fakestoreapi.com/products", async function(route)
+    {
+        // generate some fake data
+        const productsData = [
+            { id: 1, name: "Mobiles", cost: 40000 },
+            { id: 2, name: "Laptop", cost: 40000  },
+            { id: 3, name: "Books", cost: 400  }
+        ]
+
+        await route.fulfill(
+        {  body: JSON.stringify(productsData),
+            status: 200,
+            contentType: "application/json"
+         }
+    )
+    })
+
+    await page.goto("https://fakestoreapi.com/products")
+    await page.waitForTimeout(50000)
+})
