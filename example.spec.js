@@ -1,31 +1,24 @@
-// open the browser
-// naviagte to facebook
-// enter valid username
-// enter valid password
-// click on login button
+import { test, expect } from '@playwright/test';
+import { BrowserUtils } from '../utils/BrowserUtils';
 
-import { test } from "@playwright/test"
 
-test("verify login with valid data", async function({page})
-{
-    await page.goto("https://www.facebook.com")
 
-    await page.locator("input[data-testid*='roy']").nth(0).fill("Welcome@gmail.com")
 
-    // await page.locator("input[data-testid^='roy']").nth(0).fill("Welcome@gmail.com")
+const browsers = [ "chromium", "firefox", "webkit" ];
 
-    // await page.locator("input[data-testid='royal-email']").fill("Welcome@gmail.com")
+    for (const browser of browsers) {
 
-    // await page.locator("[data-testid='royal-email']").fill("Welcome@gmail.com")
+    test(`First test case running in ${browser}`, async () => {
+        const browserUtils = new BrowserUtils();
+        const page = await browserUtils.launchBrowser(browser);
+        await page.goto("https://www.amazon.in");
+        await browserUtils.closeBrowser()
+    });
 
-    // await page.locator(".inputtext").nth(0).fill("Welcome@gmail.com")
-    // await page.locator(".inputtext").nth(1).fill("Welcome")
-    // await page.locator(".inputtext").first().fill("Raju@gmail.com")
-
-    await page.waitForTimeout(3000)
-
-    // await page.locator("#email").fill("Raju@gmail.com")
-    // await page.locator("#pass").fill("Rani@1234")
-
-    // await page.waitForTimeout(5000)
-})
+    test(`Second test case running in ${browser}`, async () => {
+        const browserUtils = new BrowserUtils();
+        const page = await browserUtils.launchBrowser(browser);
+        await page.goto("https://www.facebook.com")
+        await browserUtils.closeBrowser()
+    });
+}
