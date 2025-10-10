@@ -1,0 +1,87 @@
+
+## 🧱 Complex HTML Code (save as `shop.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Online Shop</title>
+  <style>
+    .hidden { display: none; }
+    .product { border: 1px solid #ccc; padding: 10px; margin: 10px; }
+    .price { color: green; }
+    .btn { background: blue; color: white; padding: 5px 10px; cursor: pointer; border: none; }
+    .btn:hover { background: darkblue; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Online Shop</h1>
+
+  <div id="category-section">
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="#" data-cat="electronics">Electronics</a></li>
+      <li><a href="#" data-cat="clothing">Clothing</a></li>
+      <li><a href="#" data-cat="books">Books</a></li>
+    </ul>
+  </div>
+
+  <div class="product-list">
+    <div class="product" data-id="p1">
+      <h3 class="title">Wireless Mouse</h3>
+      <p class="price">$25</p>
+      <button class="btn add-to-cart" data-name="Wireless Mouse">Add to Cart</button>
+    </div>
+
+    <div class="product" data-id="p2">
+      <h3 class="title">Noise Cancelling Headphones</h3>
+      <p class="price">$99</p>
+      <button class="btn add-to-cart" data-name="Noise Cancelling Headphones">Add to Cart</button>
+    </div>
+
+    <div class="product" data-id="p3">
+      <h3 class="title">The Pragmatic Programmer</h3>
+      <p class="price">$45</p>
+      <button class="btn add-to-cart" data-name="The Pragmatic Programmer">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.add-to-cart');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.getAttribute('data-name');
+        const li = document.createElement('li');
+        li.textContent = item;
+        document.getElementById('cart-items').appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🎯 Playwright Questions (Locator Practice)
+
+ Question 1 — Locate by Different Selectors
+
+Write Playwright code to locate and print the text of:
+
+1. The main heading (`Welcome to My Online Shop`)
+2. The price of the second product (`Noise Cancelling Headphones`)
+3. The "Add to Cart" button of “The Pragmatic Programmer”
+4. The category link for “Clothing”
+
+
+ Question 2 — Locator Challenge
+
+Find 3 different ways to locate the “Add to Cart” button for the Noise Cancelling Headphones product.
+
